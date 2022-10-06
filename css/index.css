@@ -1,0 +1,72 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+:root {
+  --primary-font: "Montserrat", sans-serif;
+  --secondary-font: "Seymour One", sans-serif;
+  --primary-color: #131313;
+  --secondary-color: #FCFCFC;
+  --main-theme-color: #84A178;
+  --accent-color: #F8D24E;
+  --button-hover-focus-color: #0A8817;
+  --palette-color-1: #AEC6A5;
+  --palette-color-1: #EFD478;
+  --palette-color-1: #D6936D;
+}
+
+.visually-hidden {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+body {
+  color: var(--primary-color);
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.76;
+}
+
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.list {
+  list-style: none;
+}
+
+.container {
+  max-width: 480px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media screen and (tablet-min) and (max-width: 1199px) {
+  .container {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}/*# sourceMappingURL=index.css.map */

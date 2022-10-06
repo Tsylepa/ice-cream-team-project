@@ -1,0 +1,22 @@
+:root {
+  --primary-font: 'Montserrat', sans-serif;
+  --secondary-font: 'Seymour One', sans-serif;
+  --primary-color: #131313;
+  --secondary-color: #FCFCFC;
+  --main-theme-color: #84A178;
+  --accent-color: #F8D24E;
+  --button-hover-focus-color: #0A8817;
+  --palette-color-1: #AEC6A5;
+  --palette-color-1: #EFD478;
+  --palette-color-1: #D6936D;
+}
+
+
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1200px;
+$mobile-min: 'min-width:'$mobile;
+$mobile-max: 'max-width:'calc($tablet - 1px);
+$tablet-min: 'min-wdth:'$tablet;
+$tablet-max: 'max-width:'calc($desktop - 1px);
+$desktop-min: 'min-width:' $desktop;
