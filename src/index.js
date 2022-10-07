@@ -1,17 +1,7 @@
-new Swiper('.swiper-box', {
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-    },
-    grabCursor: true,
-    keyboard: {
-        enabled: true
-    },
-    loop: true,
-
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: true
-    },
-    speed: 800,
-});
+import './js/anchor-scroll';
+import './js/header-scroll';
+import './js/mobile-menu';
+import './js/modal';
+import './js/simple-lightbox';
+import './js/slick';
+import './js/slider';

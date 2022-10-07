@@ -25,9 +25,6 @@
 body {
   color: var(--primary-color);
   font-family: var(--primary-font);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.76;
 }
 
 ul,
@@ -52,9 +49,20 @@ img {
 }
 
 .container {
-  max-width: 480px;
+  display: inherit;
+  width: 100vw;
   padding-left: 20px;
   padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .container {
+    max-width: 480px;
+  }
 }
 @media screen and (tablet-min) and (max-width: 1199px) {
   .container {
