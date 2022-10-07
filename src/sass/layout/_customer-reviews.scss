@@ -14,6 +14,17 @@
     }
 }
 
+.reviews-list__photo {
+    display: block;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background-color: var(--main-theme-color);
+    margin-bottom: 32px;
+margin-left: auto;
+margin-right: auto;
+}
+
 .reviews-list__box {
     background-color: var(--main-theme-color);
     margin-left: auto;
