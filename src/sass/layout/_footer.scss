@@ -1,26 +1,62 @@
-.footer__сontainer {
-  background-color: var(--main-theme-color);
-}
-.social {
-  &__list {
+.footer {
+  &__сontainer {
+    background-color: var(--main-theme-color);
+  }
+  &__contact {
     display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+  }
+  &__rights {
+    display: block;
+    width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    &--text {
+      @extend %flexCenter;
+      @include font(700, 14px, 152%);
+      font: var(--primary-font);
+      color: var(--rights-color);
+      flex-wrap: wrap;
+    }
+  }
+  &__list {
+    list-style-type: none;
+  }
+  &__item {
+    &--title {
+      margin-bottom: 42px;
+    }
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.social {
+  padding-bottom: 38px;
+  &__list {
+    @include grid(3, 3, 28px);
+    display: flex;
+    justify-content: flex-end;
     flex-direction: row;
+    list-style-type: none;
   }
   &__link {
-    text-decoration: none;
-    display: flex;
+    @extend %flexCenter;
     border-radius: 50%;
-    align-items: center;
-    text-align: center;
     padding: 0px;
     width: 32px;
     height: 32px;
     cursor: pointer;
-    color: var(--accent-color);
+    background-color: var(--accent-color);
     fill: var(--main-theme-color);
     &:hover,
     &:focus {
       fill: var(--secondary-color);
+    }
+    &--logo {
+      @extend %flexCenter;
     }
   }
 }
