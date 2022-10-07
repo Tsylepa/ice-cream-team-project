@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import '~node_modules/modern-normalize/modern-normalize.css';
 :root {
   --primary-font: "Montserrat", sans-serif;
@@ -75,4 +76,29 @@ img {
     padding-left: 16px;
     padding-right: 16px;
   }
+}
+
+.footer__сontainer {
+  background-color: var(--main-theme-color);
+}
+
+.social__list {
+  display: flex;
+  flex-direction: row;
+}
+.social__link {
+  text-decoration: none;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  text-align: center;
+  padding: 0px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  color: var(--accent-color);
+  fill: var(--main-theme-color);
+}
+.social__link:hover, .social__link:focus {
+  fill: var(--secondary-color);
 }/*# sourceMappingURL=index.css.map */

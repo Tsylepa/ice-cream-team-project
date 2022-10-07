@@ -1,0 +1,26 @@
+.footer__сontainer {
+  background-color: var(--main-theme-color);
+}
+.social {
+  &__list {
+    display: flex;
+    flex-direction: row;
+  }
+  &__link {
+    text-decoration: none;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    color: var(--accent-color);
+    fill: var(--main-theme-color);
+    &:hover,
+    &:focus {
+      fill: var(--secondary-color);
+    }
+  }
+}
