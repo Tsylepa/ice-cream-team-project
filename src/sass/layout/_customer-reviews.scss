@@ -62,19 +62,19 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
-        @media screen and (max-width: 767px) {
+        @media screen and ($mobile-max) {
             max-width: 280px;
             border-radius: 10px;
             padding: 34px 39px;
             }
 
-        @media screen and (min-width: 767px) and (max-width: 1199px) {
+        @media screen and ($tablet-min) and ($tablet-max) {
             width: 705px;
             border-radius: 10px;
             padding: 29px 80px;
             }
 
-        @media screen and (min-width: 1200px) {
+        @media screen and ($desktop-min) {
             width: 968px;
             border-radius: 24px;
             padding: 39px 109px 47px 109px;
