@@ -1,0 +1,103 @@
+
+// .background-wrapper {
+//     background-image: url("/src/images/Bg/bg-gallery-desktop.jpg");
+//     background-repeat: no-repeat;
+//     background-size: cover;
+
+//     @media screen and (min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (min-resolution: 2dppx) {
+//         background-image: url("/src/images/Bg/bg-gallery-desktop@2x.jpg");
+//     }
+// }
+
+.customer-reviews {
+    @media screen and ($mobile-max) {
+        padding-bottom: 393px;
+        max-width: 768px;
+    }
+
+    @media screen and ($tablet-min) and ($tablet-max) {
+        padding-bottom: 384px;
+        max-width: 1199px;
+    }
+        
+    @media screen and ($desktop-min) {
+        padding-bottom: 196px;
+        max-width: 1900px;
+    }
+}
+
+
+.swiper-box {
+    position: relative;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-bottom: 22px;
+
+    .swiper-pagination {
+    bottom: 0px;
+    }
+    .swiper-pagination-bullet {
+    background-color: var(--main-theme-color);  
+    }
+
+        @media screen and ($tablet-min) {
+            padding-bottom: 40px;
+            }               
+}
+
+.reviews-list__pic {
+    margin-bottom: 32px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 50%;
+}
+
+
+.reviews-list__box {
+    background-color: var(--main-theme-color);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+
+    border-radius: 10px;
+    padding: 34px 39px;
+
+        @media screen and ($mobile-max) {
+            max-width: 280px;
+            }
+
+        @media screen and ($tablet-min) and ($tablet-max) {
+            width: 705px;
+            border-radius: 10px;
+            padding: 29px 80px;
+            }
+
+        @media screen and ($desktop-min) {
+            width: 968px;
+            border-radius: 24px;
+            padding: 39px 109px 47px 109px;
+            }
+}
+
+
+
+.reviews-list__text {
+    color: var(--secondary-color);
+    text-align: center;
+
+    @include font (400, 12px, 2.6);
+       
+        @media screen and ($tablet-min) {
+            @include font (500, 16px, 1.9);
+            }
+}
+
+.reviews-list__text_color {
+    color: var(--primary-color);
+}
+
+
+
