@@ -10,17 +10,17 @@
 }
 
 .customer-reviews {
-    @media screen and (max-width: 767px) {
+    @media screen and ($mobile-max) {
         padding-bottom: 393px;
         max-width: 768px;
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and ($tablet-min) and ($tablet-max) {
         padding-bottom: 384px;
         max-width: 1199px;
     }
         
-    @media screen and (min-width: 1200px) {
+    @media screen and ($desktop-min) {
         padding-bottom: 196px;
         max-width: 1900px;
     }
@@ -33,17 +33,16 @@
     margin-left: auto;
     margin-right: auto;
 
+    padding-bottom: 22px;
+
     .swiper-pagination {
     bottom: 0px;
     }
     .swiper-pagination-bullet {
     background-color: var(--main-theme-color);  
     }
-        @media screen and (max-width: 767px) {
-            padding-bottom: 22px;
-            }
-        
-        @media screen and (min-width: 768px) {
+
+        @media screen and ($tablet-min) {
             padding-bottom: 40px;
             }               
 }
@@ -62,10 +61,12 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
+
+    border-radius: 10px;
+    padding: 34px 39px;
+
         @media screen and ($mobile-max) {
             max-width: 280px;
-            border-radius: 10px;
-            padding: 34px 39px;
             }
 
         @media screen and ($tablet-min) and ($tablet-max) {
@@ -86,12 +87,11 @@
 .reviews-list__text {
     color: var(--secondary-color);
     text-align: center;
-        @media screen and (max-width: 767px) {
-            @include font (400, 12px, 30px);
-            }
-                        
-        @media screen and (min-width: 768px) {
-            @include font (500, 16px, 30px);
+
+    @include font (400, 12px, 2.6);
+       
+        @media screen and ($tablet-min) {
+            @include font (500, 16px, 1.9);
             }
 }
 
