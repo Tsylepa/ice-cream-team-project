@@ -1,1 +1,117 @@
 @import './header';
+.link {
+  display: inline-block;
+  text-decoration: none;
+}
+.header {
+  background-color: var(--main-theme-color);
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.logo {
+  padding-top: 12px;
+}
+.menu__btn {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  line-height: 0;
+  color: var(--secondary-color);
+  fill: currentColor;
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+@media screen and ($mobile-max) {
+  .menu__btn {
+    display: none;
+  }
+}
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--maim-theme-color);
+  font-family: var(--primary-font);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and ($mobile-max) {
+  .mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    padding: 16px 20px;
+    color: var(--secondary-color);
+    fill: currentColor;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+  .mobile-menu__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+  }
+  .mobile-menu__list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+    gap: 32px;
+  }
+  .mobile-menu__item {
+    flex-basis: calc((100% - 3 * 32px) / 4);
+    // @include grid(4);
+  }
+  .mobile-menu__link {
+    font-family: var(--primary-font);
+    @include font(500, 32px, 39px);
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      color: var(--primary-font);
+    }
+  }
+  .mobile-menu__link--current {
+    color: var(--primary-color);
+  }
+}
+.menu__btn {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  line-height: 0;
+  color: var(--darkest-color);
+  fill: currentColor;
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu__btn {
+    display: none;
+  }
+}
