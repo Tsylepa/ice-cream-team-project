@@ -1,7 +1,7 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 :root {
-  --primary-font: 'Montserrat', sans-serif;
-  --secondary-font: 'Seymour One', sans-serif;
+  --primary-font: "Montserrat", sans-serif;
+  --secondary-font: "Seymour One", sans-serif;
   --primary-color: #131313;
   --secondary-color: #fcfcfc;
   --main-theme-color: #84a178;
@@ -10,6 +10,18 @@
   --palette-color-1: #aec6a5;
   --palette-color-1: #efd478;
   --palette-color-1: #d6936d;
+}
+
+.modal, .backdrop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .visually-hidden {
@@ -56,8 +68,8 @@ img {
   margin-left: auto;
   margin-right: auto;
   -webkit-box-align: inherit;
-  -ms-flex-align: inherit;
-  align-items: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .container {
@@ -103,8 +115,8 @@ img {
   position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   max-width: 480px;
   padding: 28px;
   font-weight: 400;
@@ -137,8 +149,7 @@ img {
   height: 16px;
   fill: var(--primary-color);
 }
-.modal__close:hover,
-.modal__close:focus {
+.modal__close:hover, .modal__close:focus {
   fill: var(--button-hover-focus-color);
 }
 
@@ -170,4 +181,4 @@ img {
     width: 20px;
     height: 20px;
   }
-} /*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */
