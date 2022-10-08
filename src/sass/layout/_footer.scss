@@ -1,23 +1,30 @@
 .footer {
-  &__сontainer {
-    background-color: var(--main-theme-color);
-  }
+  background-color: var(--main-theme-color);
   &__contact {
+    @include font(700, 12px, 186%);
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 40px;
+    padding-bottom: 40px;
+    &--link {
+      color: var(--secondary-color);
+      text-decoration: none;
+    }
   }
   &__rights {
-    display: block;
-    width: 160px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    border-top: 1px solid var(--border-color);
+    padding-right: 0px;
+    padding-left: 0px;
     &--text {
-      @extend %flexCenter;
       @include font(700, 14px, 152%);
-      font: var(--primary-font);
+      @extend %flexCenter;
+      width: 160px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
       color: var(--rights-color);
-      flex-wrap: wrap;
+      padding-top: 16px;
+      padding-bottom: 62px;
     }
   }
   &__list {
@@ -25,7 +32,17 @@
   }
   &__item {
     &--title {
+      @include font(700, 34px, 41px);
       margin-bottom: 42px;
+      color: var(--secondary-color);
+      text-transform: uppercase;
+    }
+    &--subtitle {
+      @include font(700, 18px, 22px);
+      color: var(--secondary-color);
+      width: 232;
+      word-wrap: normal;
+      text-transform: uppercase;
     }
   }
   &__item:not(:last-child) {
