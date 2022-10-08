@@ -70,10 +70,10 @@
     &:focus {
       fill: var(--secondary-color);
     }
-    &--logo {
-      width: 19px;
-      height: 19px;
-    }
+  }
+  &__logo {
+    width: 19px;
+    height: 19px;
   }
   &__contact {
     @include font(700, 12px, 186%);
@@ -142,10 +142,10 @@
     &__link {
       width: 34px;
       height: 34px;
-      &--logo {
-        width: 20px;
-        height: 20px;
-      }
+    }
+    &__logo {
+      width: 20px;
+      height: 20px;
     }
     &__contact {
       @include font(700, 14px, 186%);
