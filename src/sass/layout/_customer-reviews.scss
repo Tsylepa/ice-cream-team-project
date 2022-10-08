@@ -1,13 +1,13 @@
 
-.background-wrapper {
-    background-image: url("/src/images/Bg/bg-gallery-desktop.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+// .background-wrapper {
+//     background-image: url("/src/images/Bg/bg-gallery-desktop.jpg");
+//     background-repeat: no-repeat;
+//     background-size: cover;
 
-    @media screen and (min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (min-resolution: 2dppx) {
-        background-image: url("/src/images/Bg/bg-gallery-desktop@2x.jpg");
-    }
-}
+//     @media screen and (min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (min-resolution: 2dppx) {
+//         background-image: url("/src/images/Bg/bg-gallery-desktop@2x.jpg");
+//     }
+// }
 
 .customer-reviews {
     @media screen and ($mobile-max) {
