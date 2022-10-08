@@ -92,6 +92,9 @@
       flex-direction: row;
       justify-content: space-between;
     }
+    &__list {
+      padding-left: 12px;
+    }
     &__item {
       &--title {
         @include font(700, 48px, 59px);

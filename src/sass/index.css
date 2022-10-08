@@ -191,6 +191,9 @@ img {
     flex-direction: row;
     justify-content: space-between;
   }
+  .footer__list {
+    padding-left: 12px;
+  }
   .footer__item--title {
     font-weight: 700;
     font-size: 48px;
