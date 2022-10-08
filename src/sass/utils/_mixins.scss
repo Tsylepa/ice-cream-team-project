@@ -4,19 +4,22 @@
   line-height: $line-height;
 }
 
-@mixin grid($mobile-raw-elements, $tab-desk-raw-elements, $gap) {
+@mixin grid($mobile-row-elements, $tab-desk-row-elements, $gap) {
   display: flex;
   flex-wrap: wrap;
   gap: $gap;
 
   &__item {
     flex-basis: calc(
-      (100% - (($mobile-raw-elements - 1) * $gap)) / $mobile-raw-elements);
+      (100% - (($mobile-row-elements - 1) * $gap)) / $mobile-row-elements
+    );
   }
 
   @media screen and ($tablet-min) {
     &__item {
-      flex-basis: calc((100% - (($tab-desk-raw-elements - 1) * $gap)) / $tab-desk-raw-elements);
+      flex-basis: calc(
+        (100% - (($tab-desk-row-elements - 1) * $gap)) / $tab-desk-row-elements
+      );
     }
   }
 }
