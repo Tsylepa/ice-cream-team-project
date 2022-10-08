@@ -16,20 +16,22 @@
 .logo {
   padding-top: 12px;
 }
+.logo__mobile-menu {
+  padding-left: 30px;
+}
+.logo-img {
+  min-width: 40px;
+  min-height: 37px;
+}
 .menu__btn {
   border: none;
   background-color: transparent;
   padding: 0;
   line-height: 0;
-  color: var(--secondary-color);
-  fill: currentColor;
+  //   color: var(--secondary-color);
+  //   fill: currentColor;
   &:hover {
     color: var(--accent-color);
-  }
-}
-@media screen and ($mobile-max) {
-  .menu__btn {
-    display: none;
   }
 }
 .mobile-menu {
@@ -39,7 +41,7 @@
   z-index: 100;
   width: 100%;
   height: 100vh;
-  background-color: var(--maim-theme-color);
+  background-color: var(--main-theme-color);
   font-family: var(--primary-font);
   opacity: 0;
   visibility: hidden;
@@ -47,7 +49,12 @@
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and ($mobile-max) {
+.mobile-menu__container {
+  position: relative;
+  height: 100%;
+  padding: 0px 20px 60px 20px;
+}
+@media screen and ($mobile-min) {
   .mobile-menu.is-open {
     opacity: 1;
     visibility: visible;
@@ -55,10 +62,10 @@
   }
   .close-btn {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 16px;
+    right: 20px;
     background-color: transparent;
-    padding: 16px 20px;
+    border: none;
     color: var(--secondary-color);
     fill: currentColor;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -75,18 +82,16 @@
     justify-content: space-between;
   }
   .mobile-menu__list {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-bottom: auto;
     gap: 32px;
   }
-  .mobile-menu__item {
-    flex-basis: calc((100% - 3 * 32px) / 4);
-    // @include grid(4);
-  }
   .mobile-menu__link {
     font-family: var(--primary-font);
-    @include font(500, 32px, 39px);
+    @include font(700, 32px, 39px);
     text-decoration: none;
     color: var(--secondary-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -98,19 +103,11 @@
   .mobile-menu__link--current {
     color: var(--primary-color);
   }
-}
-.menu__btn {
-  border: none;
-  background-color: transparent;
-  padding: 0;
-  line-height: 0;
-  color: var(--darkest-color);
-  fill: currentColor;
-  &:hover {
-    color: var(--accent-color);
+  .mobile-menu__buy-btn {
+    margin-top: auto;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and ($mobile-max) {
   .menu__btn {
     display: none;
   }

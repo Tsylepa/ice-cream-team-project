@@ -15,7 +15,11 @@
           srcset="./images/Logo/logo-s.png 1x, ./images/Logo/logo-s@2x.png 2x"
           media="(min-width: 480px)"
         />
-        <img src="./images/Logo/logo-s.png" alt="Logo ice-cream" />
+        <img
+          class="logo-img"
+          src="./images/Logo/logo-s.png"
+          alt="Logo ice-cream"
+        />
       </picture>
     </a>
     <button type="button" class="menu__btn" data-menu-open>
@@ -24,9 +28,9 @@
       </svg>
     </button>
   </div>
-  <div class="mobile-menu" data-menu>
+  <div class="mobile-menu">
     <div class="container mobile-menu__container">
-      <a href="#" class="logo">
+      <a href="#" class="logo logo__mobile-menu">
         <picture>
           <source
             srcset="./images/Logo/logo-l.png 1x, ./images/Logo/logo-l@2x.png 2x"
@@ -40,10 +44,14 @@
             srcset="./images/Logo/logo-s.png 1x, ./images/Logo/logo-s@2x.png 2x"
             media="(min-width: 480px)"
           />
-          <img src="./images/Logo/logo-s.png" alt="Logo ice-cream" />
+          <img
+            class="logo-img"
+            src="./images/Logo/logo-s.png"
+            alt="Logo ice-cream"
+          />
         </picture>
       </a>
-      <button class="close-btn" data-menu-close>
+      <button class="close-btn">
         <svg class="mobile-menu__close-btn" width="32" height="32">
           <use href="./images/sprite/icons.svg#icon-close-button"></use>
         </svg>
@@ -76,3 +84,6 @@
     </div>
   </div>
 </header>
+<main>
+  <section class="hero-section"></section>
+</main>
