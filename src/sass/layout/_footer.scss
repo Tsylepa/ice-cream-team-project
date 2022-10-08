@@ -12,6 +12,7 @@
     &--text {
       @include font(700, 14px, 152%);
       @extend %flexCenter;
+      letter-spacing: 0.02em;
       width: 160px;
       text-align: center;
       margin-left: auto;
@@ -54,7 +55,7 @@
     justify-content: flex-end;
     flex-direction: row;
     list-style-type: none;
-    margin-bottom: 32px;
+    margin-bottom: 38px;
   }
   &__link {
     @extend %flexCenter;
@@ -76,6 +77,7 @@
   }
   &__contact {
     @include font(700, 12px, 186%);
+    letter-spacing: 0.02em;
     display: flex;
     justify-content: flex-end;
     padding-bottom: 40px;
@@ -92,35 +94,28 @@
       flex-direction: row;
       justify-content: space-between;
     }
-    &__list {
-      padding-left: 12px;
-    }
     &__item {
       &--title {
         @include font(700, 48px, 59px);
-        margin-bottom: 42px;
         width: 340px;
       }
       &--subtitle {
         @include font(700, 26px, 32px);
-        color: var(--secondary-color);
         width: 352px;
       }
     }
     &__item:not(:last-child) {
       margin-bottom: 10px;
     }
+    &__item:last-child {
+      margin-bottom: 32px;
+    }
     &__rights {
       width: 100%;
       border-top: 1px solid var(--border-color);
-      padding-right: 0px;
-      padding-left: 0px;
       &--text {
         @include font(700, 14px, 152%);
-        @extend %flexCenter;
-        width: 298px;
-        margin-left: auto;
-        margin-right: auto;
+        width: 320px;
         padding-top: 14px;
         padding-bottom: 14px;
       }
@@ -128,8 +123,7 @@
   }
   .social {
     display: flex;
-    padding-bottom: 68px;
-    padding-right: 12px;
+    padding-bottom: 56px;
     flex-wrap: wrap;
     flex-direction: column;
     &__list {
@@ -138,7 +132,8 @@
       justify-content: flex-end;
       flex-direction: row;
       list-style-type: none;
-      padding-top: 12px;
+      padding-top: 68px;
+      margin-bottom: 32px;
     }
     &__link {
       width: 34px;
@@ -148,21 +143,60 @@
         height: 20px;
       }
     }
+    &__contact {
+      @include font(700, 14px, 186%);
+      display: flex;
+      justify-content: flex-end;
+      padding-bottom: 56px;
+    }
   }
 }
 
 @media screen and ($desktop-min) {
   .footer {
-    background-color: tomato;
+    &__сontainer {
+      width: 100%;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__item {
+      &--title {
+        @include font(700, 58px, 71px);
+        margin-bottom: 42px;
+        width: 497px;
+      }
+      &--subtitle {
+        @include font(400, 30px, 37px);
+        color: var(--secondary-color);
+        width: 504px;
+      }
+    }
+    &__item:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    &__rights {
+      border-top: 0;
+      padding-right: 0px;
+      padding-left: 0px;
+      &--text {
+        @include font(700, 14px, 26px);
+        width: 320px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+      }
+    }
   }
   .social {
-    padding-bottom: 32px;
+    padding-bottom: 60px;
     &__list {
-      @include grid(3, 3, 30px);
+      padding-top: 12px;
+      margin-bottom: 40px;
     }
-    &__link {
-      width: 34px;
-      height: 34px;
+    &__contact {
+      @include font(700, 16px, 186%);
+      padding-bottom: 60px;
     }
   }
 }
