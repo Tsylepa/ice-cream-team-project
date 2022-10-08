@@ -1,16 +1,18 @@
-<div class="backdrop">
+<div class="backdrop is-hidden" id="read-more">
   <div class="modal">
+    <svg class="modal__close">
+      <use href="/src/images/sprite/icons.svg#icon-close-button"></use>
+    </svg>
     <h2 class="modal__heading">How it’s made?</h2>
     <iframe
-      width="224"
-      height="200"
+      class="modal__iframe"
       src="https://www.youtube.com/embed/xrbKIyBFAFM"
       title="YouTube video player"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     ></iframe>
-    <p>
+    <p class="modal__description">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et Lorem ipsum dolor sit amet, consectetur
       adipiscing elit, sed do eiusmod tempor incididunt ut labore et
