@@ -347,10 +347,6 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .footer__сontainer {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
