@@ -85,6 +85,10 @@
       color: var(--secondary-color);
       text-decoration: none;
     }
+    &--link:hover,
+    :focus {
+      color: var(--accent-color);
+    }
   }
 }
 @media screen and ($tablet-min) and ($tablet-max) {

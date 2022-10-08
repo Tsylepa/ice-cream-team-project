@@ -186,6 +186,10 @@ img {
   color: var(--secondary-color);
   text-decoration: none;
 }
+.social__contact--link:hover,
+.social__contact :focus {
+  color: var(--accent-color);
+}
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer__сontainer {
