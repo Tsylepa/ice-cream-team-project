@@ -9,24 +9,6 @@
 //     }
 // }
 
-.customer-reviews {
-    @media screen and ($mobile-max) {
-        padding-bottom: 393px;
-        max-width: 768px;
-    }
-
-    @media screen and ($tablet-min) and ($tablet-max) {
-        padding-bottom: 384px;
-        max-width: 1199px;
-    }
-        
-    @media screen and ($desktop-min) {
-        padding-bottom: 196px;
-        max-width: 1900px;
-    }
-}
-
-
 .swiper-box {
     position: relative;
     overflow: hidden;
