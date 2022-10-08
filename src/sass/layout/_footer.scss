@@ -160,7 +160,6 @@
   .footer {
     &__сontainer {
       width: 100%;
-      border-bottom: 1px solid var(--border-color);
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -181,9 +180,9 @@
       margin-bottom: 10px;
     }
     &__rights {
-      border-top: 0;
-      padding-right: 0px;
-      padding-left: 0px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 1200px;
       &--text {
         @include font(700, 14px, 26px);
         width: 320px;

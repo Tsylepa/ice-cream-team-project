@@ -284,7 +284,6 @@ img {
 @media screen and (min-width: 1200px) {
   .footer__сontainer {
     width: 100%;
-    border-bottom: 1px solid var(--border-color);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -307,9 +306,9 @@ img {
     margin-bottom: 10px;
   }
   .footer__rights {
-    border-top: 0;
-    padding-right: 0px;
-    padding-left: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
   }
   .footer__rights--text {
     font-weight: 700;
