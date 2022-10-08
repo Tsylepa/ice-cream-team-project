@@ -1,14 +1,8 @@
 .footer {
   background-color: var(--main-theme-color);
-  &__contact {
-    @include font(700, 12px, 186%);
+  &__сontainer {
     display: flex;
-    justify-content: flex-end;
-    padding-bottom: 40px;
-    &--link {
-      color: var(--secondary-color);
-      text-decoration: none;
-    }
+    flex-direction: column;
   }
   &__rights {
     width: 100%;
@@ -33,14 +27,14 @@
   &__item {
     &--title {
       @include font(700, 34px, 41px);
-      margin-bottom: 42px;
       color: var(--secondary-color);
       text-transform: uppercase;
+      width: 234px;
     }
     &--subtitle {
       @include font(700, 18px, 22px);
       color: var(--secondary-color);
-      width: 232;
+      width: 232px;
       word-wrap: normal;
       text-transform: uppercase;
     }
@@ -48,21 +42,24 @@
   &__item:not(:last-child) {
     margin-bottom: 16px;
   }
+  &__item:last-child {
+    margin-bottom: 42px;
+  }
 }
 
 .social {
-  padding-bottom: 38px;
   &__list {
     @include grid(3, 3, 28px);
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
     list-style-type: none;
+    margin-bottom: 32px;
   }
   &__link {
     @extend %flexCenter;
     border-radius: 50%;
-    padding: 0px;
+    padding: 0;
     width: 32px;
     height: 32px;
     cursor: pointer;
@@ -73,7 +70,96 @@
       fill: var(--secondary-color);
     }
     &--logo {
-      @extend %flexCenter;
+      width: 19px;
+      height: 19px;
+    }
+  }
+  &__contact {
+    @include font(700, 12px, 186%);
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 40px;
+    &--link {
+      color: var(--secondary-color);
+      text-decoration: none;
+    }
+  }
+}
+@media screen and ($tablet-min) and ($tablet-max) {
+  .footer {
+    &__сontainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__item {
+      &--title {
+        @include font(700, 48px, 59px);
+        margin-bottom: 42px;
+        width: 340px;
+      }
+      &--subtitle {
+        @include font(700, 26px, 32px);
+        color: var(--secondary-color);
+        width: 352px;
+      }
+    }
+    &__item:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    &__rights {
+      width: 100%;
+      border-top: 1px solid var(--border-color);
+      padding-right: 0px;
+      padding-left: 0px;
+      &--text {
+        @include font(700, 14px, 152%);
+        @extend %flexCenter;
+        width: 298px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 14px;
+        padding-bottom: 14px;
+      }
+    }
+  }
+  .social {
+    display: flex;
+    padding-bottom: 68px;
+    padding-right: 12px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    &__list {
+      @include grid(3, 3, 30px);
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: row;
+      list-style-type: none;
+      padding-top: 12px;
+    }
+    &__link {
+      width: 34px;
+      height: 34px;
+      &--logo {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+@media screen and ($desktop-min) {
+  .footer {
+    background-color: tomato;
+  }
+  .social {
+    padding-bottom: 32px;
+    &__list {
+      @include grid(3, 3, 30px);
+    }
+    &__link {
+      width: 34px;
+      height: 34px;
     }
   }
 }
