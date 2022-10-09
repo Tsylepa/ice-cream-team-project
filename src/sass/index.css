@@ -179,6 +179,11 @@ address {
 }
 .about-description__button {
   margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.about-description__button-icon {
+  margin-left: 5px;
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
