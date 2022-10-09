@@ -3,27 +3,23 @@
     @media screen and ($tablet-min) {
         margin-top: -164px; //або 50%
     }
-
     @media screen and ($desktop-min) {
         margin-top: -94px;
     }
 }
 
 .gallery__wrapper {
+    @extend %flexCenter;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 279px;
+    background-color: #ffffff;
+    
     height: 130px;
     border-radius: 7.4px;
-    
     @media screen and ($tablet-min) {
-        width: 704px;
         height: 327px;
         border-radius: 18px;
     }
     @media screen and ($desktop-min) {
-        width: 1013px;
         height: 422px;
         border-radius: 24px;
     }
@@ -37,16 +33,21 @@
     opacity: 0;
     max-width: 100%;
     border-radius: 7.4px;
-    
-        
+    @media screen and ($tablet-min) {
+        height: 327px;
+        border-radius: 18px;
+    }
+    @media screen and ($desktop-min) {
+        height: 422px;
+        border-radius: 24px;
+    }
+    overflow: hidden;
 }
 
 .gallery__img{
-    overflow: hidden;
     @media screen and ($tablet-min) {
         border-radius: 18px;
     }
-    
     @media screen and ($desktop-min) {
         border-radius: 24px;
     }
