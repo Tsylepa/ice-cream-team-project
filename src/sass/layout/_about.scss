@@ -1,24 +1,19 @@
 .about {
     background-color: var(--main-theme-color);
-    padding: 60px 16px;
+    padding-top: 60px;
 
     &__label {
         font-family: var(--primary-font);
         color: var(--secondary-color);
-        font-weight: 800;
-        font-size: 30px;
-        line-height: 1.23px;
         text-align: center;
         text-transform: uppercase;
+
     }
 
     &__title {
         margin-top: 12px;
-        margin-bottom: 82px;
         font-family: var(--secondary-font);
         color: var(--secondary-color);
-        font-size: 36px;
-        line-height: 1.25px;
         text-align: center;
         text-transform: uppercase;
     }
@@ -29,10 +24,6 @@
 
     &__img {
         display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        width: 500px;
-        height: 500px;
         position: relative;
 
         background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
@@ -41,7 +32,7 @@
 
         picture {
             position: absolute;
-            top: 39px;
+            top: 22px;
             left: 0;
         }
     }
@@ -50,12 +41,159 @@
         p {
             font-family: var(--primary-font);
             color: var(--secondary-color);
-            font-size: 16px;
+            font-weight: 400;
+            font-size: 12px;
             line-height: 1.76;
 
             &:not(:last-child) {
-                margin-bottom: 8px;
+                margin-bottom: 4px;
             }
+        }
+    }
+
+    &__wrapper-info {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+
+    &__button {
+        margin-top: 20px;
+    }
+}
+
+@media screen and ($mobile-min) and ($mobile-max) {
+    .about {
+
+        &__label {
+            font-weight: 700;
+            font-size: 18px;
+        }
+    
+        &__title {
+            margin-bottom: 32px;
+            font-weight: 400;
+            font-size: 30px;
+        }
+    }   
+    .about-description {
+        flex-direction: column;
+
+        &__wrapper {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        &__img {
+            width: 280px;
+            height: 280px;
+            margin-bottom: 62px;
+        }
+
+        &__wrapper-info {
+            text-align: center;
+            padding: 0 50px;
+        }
+
+        &__button {
+            margin-top: 48px;
+        }
+    }
+}
+
+
+ @media screen and ($tablet-min) {
+
+    .about {  
+
+
+        &__label {
+            font-weight: 800;
+            font-size: 22px;
+        }
+
+        &__title {
+            margin-bottom: 72px;
+            font-size: 34px;
+        }
+    }
+
+    .about-description {
+        flex-direction: row;
+
+        &__wrapper {
+            margin-right: 33px;
+            padding-bottom: 50px;
+        }
+
+        &__img {
+            align-items: center;
+            justify-content: center;
+            width: 330px;
+            height: 330px;
+
+            picture {
+                top: 25px;
+            }
+        }
+        &__wrapper-info {
+            align-items: flex-start;
+        }
+
+        &__info {
+            p {
+                &:not(:last-child) {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and ($desktop-min) {
+    .about {
+        padding-left: 16px;
+        padding-right: 16px;
+
+        &__label {
+            font-weight: 800;
+            font-size: 30px;
+        }
+
+        &__title {
+            margin-bottom: 82px;
+            font-size: 36px;
+        }
+    }
+
+    .about-description {
+        &__wrapper {
+            margin-right: 100px;
+            padding-bottom: 60px;
+        }
+
+        &__img {
+            width: 500px;
+            height: 500px;
+
+            picture {
+                top: 39px;
+            }
+        }
+
+        &__wrapper-info {
+            justify-content: center;
+            margin-right: 121px;
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        &__button {
+            margin-top: 60px;
         }
     }
 }
