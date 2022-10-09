@@ -120,7 +120,6 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .logo {
-    padding-top: 20px;
     margin-bottom: 45px;
   }
 }
@@ -140,15 +139,14 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .header-pages__list {
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
+    align-items: center;
     gap: 27px;
   }
-  .header-pages__item {
-    flex-basis: calc((100% - 81px) / 4);
-  }
   .header-pages__link {
-    padding-top: 40px;
-    display: block;
+    text-align: center;
     font-family: var(--primary-font);
     font-weight: 700;
     font-size: 16px;
@@ -161,6 +159,10 @@ img {
   }
   .header-pages__link--current {
     color: var(--accent-color);
+  }
+  .logo {
+    padding-top: 8px;
+    margin-bottom: 45px;
   }
 }
 .header__buttons {
@@ -377,6 +379,15 @@ img {
   }
   .hero__buttons {
     gap: 12px;
+    margin-bottom: 110px;
+  }
+  .hero__text {
+    margin-left: 256px;
+    width: 200px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--secondary-color);
   }
   .button__products {
     padding: 12px 34px;
