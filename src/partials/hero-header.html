@@ -22,11 +22,34 @@
         />
       </picture>
     </a>
-    <button type="button" class="menu__btn" data-menu-open>
-      <svg width="32" height="32">
-        <use href="./images/sprite/icons.svg#icon-burger"></use>
-      </svg>
-    </button>
+    <ul class="header-pages__list list">
+      <li class="header-pages__item">
+        <a
+          class="header-pages__link link header-pages__link--current link"
+          href="#home"
+          >Home</a
+        >
+      </li>
+      <li class="header-pages__item">
+        <a class="header-pages__link link" href="#how-it's-made?"
+          >How it’s made?</a
+        >
+      </li>
+      <li class="header-pages__item">
+        <a class="header-pages__link link" href="#our-products">Our products</a>
+      </li>
+      <li class="header-pages__item">
+        <a class="header-pages__link link" href="#contact">Contact</a>
+      </li>
+    </ul>
+    <div class="header__buttons">
+      <button type="button" class="menu__btn" data-menu-open>
+        <svg width="32" height="32">
+          <use href="./images/sprite/icons.svg#icon-burger"></use>
+        </svg>
+      </button>
+      <button class="header__buy-btn" type="button">Buy now</button>
+    </div>
   </div>
   <div class="mobile-menu">
     <div class="container mobile-menu__container">
@@ -85,5 +108,37 @@
   </div>
 </header>
 <main>
-  <section class="hero-section"></section>
+  <section class="hero__section">
+    <div class="hero__wrapper">
+      <div class="hero__left-thumb">
+        <h1 class="hero__title">
+          ice cream <br />
+          made with <br />
+          <span class="hero__title--important">passion</span>
+        </h1>
+        <ul class="hero__buttons list">
+          <li>
+            <button type="button" class="button__products">Products</button>
+          </li>
+          <li>
+            <button type="button" class="button__how-its-made">
+              How it’s made?
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="hero__right-thumb">
+        <ul class="cafes__list list">
+          <li class="cafes__item">
+            <p class="cafes__number">16</p>
+            <p class="cafes__name">cafes</p>
+          </li>
+          <li class="cafes__item">
+            <p class="cafes__number">23</p>
+            <p class="cafes__name">food trucks</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 </main>
