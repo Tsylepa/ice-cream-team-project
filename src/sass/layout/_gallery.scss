@@ -11,7 +11,7 @@
 .gallery__wrapper {
     @extend %flexCenter;
     text-align: center;
-    background-color: #ffffff;
+    background-color: var(--secondary-color);
     
     height: 130px;
     border-radius: 7.4px;
