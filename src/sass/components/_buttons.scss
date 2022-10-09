@@ -1,0 +1,42 @@
+.button {
+    @extend %flexCenter;
+    @include font(600, 14px, 1.29);
+    padding: 12px 34px;
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    background-color: var(--accent-color);
+    &:hover, &:focus {
+        background-color: var(--button-hover-focus-color);
+        border-color: var(--button-hover-focus-color);
+    }
+    &:focus {
+        color: var(--secondary-color);
+    }
+    &:disabled {
+        background-color: var(--button-disabled);
+        border-color: var(--button-disabled);
+    }
+
+    &--inverse {
+        background-color: transparent !important;
+    }
+
+}
+
+.button--anchor {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    @include font(600, 14px, 1.29);
+    &:hover {
+        color: var(--button-hover-focus-color);
+        text-decoration: none;
+    }
+    &:focus {
+        color: var(--secondary-color);
+        text-decoration: none;
+    }
+    &:disabled {
+        color: var(--button-disabled);
+    }
+}
