@@ -8,19 +8,25 @@
     }
 }
 
+.gallery__container{
+    display: flex;
+    justify-content: center;
+}
+
 .gallery__wrapper {
     @extend %flexCenter;
-    text-align: center;
     background-color: var(--secondary-color);
-    
     height: 130px;
+    width: 279px;
     border-radius: 7.4px;
     @media screen and ($tablet-min) {
         height: 327px;
+        width: 716px;
         border-radius: 18px;
     }
     @media screen and ($desktop-min) {
         height: 422px;
+        width: 1013px;
         border-radius: 24px;
     }
     overflow: hidden;
