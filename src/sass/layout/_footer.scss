@@ -50,7 +50,7 @@
 
 .social {
   &__list {
-    @include grid(3, 3, 28px);
+    @include grid(3, 28px);
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
@@ -131,7 +131,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     &__list {
-      @include grid(3, 3, 30px);
+      @include grid(3, 30px);
       display: flex;
       justify-content: flex-end;
       flex-direction: row;

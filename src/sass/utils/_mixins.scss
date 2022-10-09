@@ -4,22 +4,14 @@
   line-height: $line-height;
 }
 
-@mixin grid($mobile-row-elements, $tab-desk-row-elements, $gap) {
+@mixin grid($row-elements, $gap) {
   display: flex;
   flex-wrap: wrap;
   gap: $gap;
 
   &__item {
     flex-basis: calc(
-      (100% - (($mobile-row-elements - 1) * $gap)) / $mobile-row-elements
+      (100% - (($row-elements - 1) * $gap)) / $row-elements
     );
-  }
-
-  @media screen and ($tablet-min) {
-    &__item {
-      flex-basis: calc(
-        (100% - (($tab-desk-row-elements - 1) * $gap)) / $tab-desk-row-elements
-      );
-    }
   }
 }
