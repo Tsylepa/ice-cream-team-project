@@ -1,26 +1,58 @@
 <div class="backdrop is-hidden">
-    <div class="modal">
-        <button type="button" class="modal__button-close" data-modal-close>
-                <svg class="modal__close">
-                    <use href="/src/images/Sprite/icons.svg#icon-close-button" aria-label="button close window"></use>
-                </svg>
-        </button>
-        <b>Thank you for your interest in owning an Ice Cream shop</b>
-        <p>
-            Due to the overwhelming volume of franchise requests we are not accepting new franchisee applications at this time. Once the application process resumes, we will contact you for further information. Please fill out the contact information below and we will reach out for additional information. We appreciate your patience.
-        </p>
-        <form>
-            <label>
-            <input type="text" name="input-name" placeholder="Name">
-        </label>
-        <label>
-            <input type="text" name="input-phone" placeholder="Phone">
-        </label>
-        <label>
-            <input type="text" name="input-email" placeholder="Email">
-        </label>
-        <textarea name="textarea-comment" placeholder="Comment"></textarea>
-        <button type="submit">Submit</button>
-        </form>
-    </div>
-</div>        
+  <div class="modal">
+    <button type="button" class="modal__button-close" data-modal-close>
+      <svg class="modal__icon-close">
+        <use
+          href="/src/images/Sprite/icons.svg#icon-close-button"
+          aria-label="button close window"
+        ></use>
+      </svg>
+    </button>
+    <b class="modal__heading modal__heading_center"
+      >Thank you for your interest in owning an Ice Cream shop</b
+    >
+    <p class="modal__description modal__description_mrgbtm">
+      Due to the overwhelming volume of franchise requests we are not accepting
+      new franchisee applications at this time. Once the application process
+      resumes, we will contact you for further information. Please fill out the
+      contact information below and we will reach out for additional
+      information. We appreciate your patience.
+    </p>
+    <form name="form-modal-buynow" class="form-modal">
+      <label class="form-modal__label">
+        <input
+          type="text"
+          name="input-name"
+          placeholder="Name"
+          pattern="[a-zA-Z]{1,15}"
+          title="Your name"
+          class="form-modal__field form-modal__field_input"
+        />
+      </label>
+      <label class="form-modal__label">
+        <input
+          type="tel"
+          name="input-phone"
+          placeholder="Phone"
+          pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}"
+          title="xxx-xx-xx"
+          class="form-modal__field form-modal__field_input"
+        />
+      </label>
+      <label class="form-modal__label">
+        <input
+          type="email"
+          name="input-email"
+          placeholder="Email"
+          class="form-modal__field form-modal__field_input"
+        />
+      </label>
+      <textarea
+        name="textarea-comment"
+        placeholder="Comment"
+        class="form-modal__field form-modal__field_textarea"
+      ></textarea>
+      <button type="submit" class="button-form">Submit</button>
+    </form>
+  </div>
+</div>
