@@ -6,8 +6,6 @@
     &__list {
         color: var(--secondary-color);
         padding-top: 108px;
-        padding-left: 45px;
-        padding-right: 45px;
         display: flex;
         text-align: center;
         justify-content: center;
@@ -83,8 +81,6 @@
         padding-bottom: 204px;
 
         &__list {
-            padding-left: 76px;
-            padding-right: 76px;
             padding-top: 48px;
             flex-direction: row;
             gap: 80px;
