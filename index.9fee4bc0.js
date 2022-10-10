@@ -1,2 +1,0 @@
-(()=>{const e={openMenuBtn:document.querySelector("[data-menu-open]"),closeMenuBtn:document.querySelector("[data-menu-close]"),menu:document.querySelector("[data-menu]")};function n(){e.menu.classList.toggle("is-open")}e.openMenuBtn.addEventListener("click",n),e.closeMenuBtn.addEventListener("click",n)})(),new Swiper(".swiper-box",{pagination:{el:".swiper-pagination",clickable:!0},grabCursor:!0,keyboard:{enabled:!0},loop:!0,autoplay:{delay:5e3,disableOnInteraction:!0},speed:800});
-//# sourceMappingURL=index.9fee4bc0.js.map
