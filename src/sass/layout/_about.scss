@@ -1,6 +1,5 @@
 .about {
     background-color: var(--main-theme-color);
-    padding-top: 60px;
 
     &__label {
         font-family: var(--primary-font);
@@ -63,13 +62,12 @@
         align-items: center;
     }
 
-    &__button-icon {
-        margin-left: 5px;
-    }
+
 }
 
-@media screen and ($mobile-min) and ($mobile-max) {
+@media screen and ($mobile-max) {
     .about {
+        padding-bottom: 55px;
 
         &__label {
             font-weight: 700;
@@ -112,7 +110,7 @@
  @media screen and ($tablet-min) {
 
     .about {  
-
+        padding-bottom: 65px;
 
         &__label {
             font-weight: 800;
@@ -130,7 +128,6 @@
 
         &__wrapper {
             margin-right: 33px;
-            padding-bottom: 50px;
         }
 
         &__img {
@@ -160,8 +157,7 @@
 
 @media screen and ($desktop-min) {
     .about {
-        padding-left: 16px;
-        padding-right: 16px;
+        padding-bottom: 120px;
 
         &__label {
             font-weight: 800;
@@ -177,7 +173,6 @@
     .about-description {
         &__wrapper {
             margin-right: 100px;
-            padding-bottom: 60px;
         }
 
         &__img {

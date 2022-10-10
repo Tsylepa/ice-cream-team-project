@@ -2,9 +2,10 @@
     @extend %flexCenter;
     @include font(600, 14px, 1.29);
     padding: 12px 34px;
-    border: 2px solid var(--accent-color);
+    border: none;
     border-radius: 8px;
     background-color: var(--accent-color);
+    cursor: pointer;
     &:hover, &:focus {
         background-color: var(--button-hover-focus-color);
         border-color: var(--button-hover-focus-color);
@@ -18,12 +19,20 @@
     }
 
     &--inverse {
+        padding: 10px 32px;
+        border: 2px solid var(--accent-color);
         background-color: transparent !important;
+    }
+   
+    &__icon-arrow {
+        fill: currentColor;
+        margin-left: 5px;
     }
 
 }
 
 .button--anchor {
+    @extend %flexCenter;
     background-color: transparent;
     border: none;
     text-decoration: underline;
