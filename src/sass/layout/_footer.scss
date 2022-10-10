@@ -1,5 +1,6 @@
 .footer {
   background-color: var(--main-theme-color);
+  padding-top: 20px;
   &__сontainer {
     display: flex;
     flex-direction: column;
@@ -158,6 +159,7 @@
 
 @media screen and ($desktop-min) {
   .footer {
+    padding-top: 60px;
     &__сontainer {
       flex-direction: row;
       justify-content: space-between;
@@ -180,7 +182,7 @@
     &__rights {
       margin-left: auto;
       margin-right: auto;
-      width: 1200px;
+      width: 1168px;
       &--text {
         @include font(700, 14px, 26px);
         width: 320px;
