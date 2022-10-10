@@ -203,14 +203,8 @@ address {
   display: flex;
   align-items: center;
 }
-.about-description__button-icon {
-  margin-left: 5px;
-}
 
-@media screen and (max-width: 767px) {
-  .about {
-    padding-bottom: 0px;
-  }
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .about__label {
     font-weight: 700;
     font-size: 18px;
@@ -242,9 +236,6 @@ address {
   }
 }
 @media screen and (min-width: 768px) {
-  .about {
-    padding-bottom: 50px;
-  }
   .about__label {
     font-weight: 800;
     font-size: 22px;
@@ -280,7 +271,6 @@ address {
   .about {
     padding-left: 16px;
     padding-right: 16px;
-    padding-bottom: 60px;
   }
   .about__label {
     font-weight: 800;

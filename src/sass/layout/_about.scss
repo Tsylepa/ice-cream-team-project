@@ -63,14 +63,11 @@
         align-items: center;
     }
 
-    &__button-icon {
-        margin-left: 5px;
-    }
+
 }
 
-@media screen and ($mobile-max) {
+@media screen and ($mobile-min) and ($mobile-max) {
     .about {
-        padding-bottom: 0px;
 
         &__label {
             font-weight: 700;
@@ -113,7 +110,7 @@
  @media screen and ($tablet-min) {
 
     .about {  
-        padding-bottom: 50px;
+
 
         &__label {
             font-weight: 800;
@@ -163,7 +160,6 @@
     .about {
         padding-left: 16px;
         padding-right: 16px;
-        padding-bottom: 60px;
 
         &__label {
             font-weight: 800;
