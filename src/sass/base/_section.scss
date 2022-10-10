@@ -1,0 +1,18 @@
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-weight: 400;
+    font-size: 12px;
+  
+    &--background {
+      background-color: var(--main-theme-color);
+    }
+  }
+  
+  .section__heading {
+    font-family: var(--secondary-font);
+    @include font(400, 30px, 1.27);
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }

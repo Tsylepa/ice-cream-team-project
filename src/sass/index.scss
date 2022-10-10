@@ -2,6 +2,7 @@
 @import './utils/mixins';
 @import './utils/placeholders';
 @import './utils/visually-hidden';
+@import './utils/placeholders';
 
 @import './base/common';
 @import './base/container';
@@ -18,5 +19,9 @@
 
 @import './components/backdrop';
 @import './components/modal';
+<<<<<<< HEAD
 
 @import './components/modalwin';
+=======
+@import './components/buttons';
+>>>>>>> main

@@ -4,3 +4,5 @@
 import './js/modal';
 // import './js/simple-lightbox';
 // import './js/slick';
+
+import './js/slider';
