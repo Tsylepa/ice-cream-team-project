@@ -63,9 +63,7 @@
         align-items: center;
     }
 
-    &__button-icon {
-        margin-left: 5px;
-    }
+
 }
 
 @media screen and ($mobile-min) and ($mobile-max) {
@@ -130,7 +128,6 @@
 
         &__wrapper {
             margin-right: 33px;
-            padding-bottom: 50px;
         }
 
         &__img {
@@ -177,7 +174,6 @@
     .about-description {
         &__wrapper {
             margin-right: 100px;
-            padding-bottom: 60px;
         }
 
         &__img {
