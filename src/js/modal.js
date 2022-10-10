@@ -25,22 +25,3 @@ for (var i = 0; i < close.length; i++) {
     }
   };
 }
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  if (event.target.classList.contains('backdrop')) {
-    for (var index in modals) {
-      if (typeof modals[index].style !== 'undefined')
-        modals[index].classList.add('is-hidden');
-    }
-  }
-};
-
-$(document).on('click', '#close_vid', function () {
-  jQuery('iframe').each(function () {
-    jQuery(this)[0].contentWindow.postMessage(
-      '{"event":"command","func":"pauseVideo","args":""}',
-      '*'
-    );
-  });
-});

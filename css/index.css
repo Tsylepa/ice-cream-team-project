@@ -168,7 +168,12 @@ address {
 .header__section {
   position: fixed;
   width: 100%;
-  padding-top: 12px;
+  z-index: 100;
+}
+
+.header-scroll {
+  background-color: var(--main-theme-color);
+  opacity: 0.8;
 }
 
 .header__container {
@@ -197,6 +202,7 @@ address {
 }
 
 .logo-img {
+  padding: 7px 0;
   min-width: 40px;
   min-height: 37px;
 }
@@ -326,9 +332,6 @@ address {
   }
 }
 @media screen and (min-width: 768px) {
-  .header__section {
-    padding-top: 20px;
-  }
   .header__container {
     width: 768px;
     padding-left: 32px;
@@ -353,9 +356,6 @@ address {
   }
 }
 @media screen and (min-width: 1200px) {
-  .header__section {
-    padding-top: 8px;
-  }
   .header__container {
     width: 1200px;
     padding-left: 16px;
@@ -627,7 +627,7 @@ address {
 @media screen and (min-width: 1200px) {
   .hero__container {
     width: 1200px;
-    padding-top: 45px;
+    padding-top: 75px;
     padding-bottom: 111px;
     padding-left: 16px;
     padding-right: 16px;
@@ -2181,6 +2181,7 @@ address {
   width: 16px;
   height: 16px;
   fill: var(--primary-color);
+  cursor: pointer;
 }
 .modal__close:hover, .modal__close:focus {
   fill: var(--button-hover-focus-color);
