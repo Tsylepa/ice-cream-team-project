@@ -1,38 +1,44 @@
 .product {
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
 
-    @media screen and ($mobile-max) {
+
+    @media screen and (min-width:210px) and ($mobile-max) {
         background-image: url(../images/products/cardbg1-s.jpg);
     }
 
-    @media screen and (min-device-pixel-ratio: 2) and ($mobile-max),
-    screen and (min-resolution: 192dpi)and ($mobile-max),
-    screen and (min-resolution: 2dppx) and ($mobile-max) {
+    @media screen and (min-device-pixel-ratio: 2) and (min-width:210px) and ($mobile-max),
+    screen and (min-resolution: 192dpi)and (min-width:210px) and($mobile-max),
+    screen and (min-resolution: 2dppx) and (min-width:210px) and($mobile-max) {
         background-image: url(../images/products/cardbg1-s@2x.jpg);
     }
 
     @media screen and ($tablet-min) {
-        background-image: url(../images/products/cardbg2-s.jpg);
+        background-image: url(../images/products/productbg-m.jpg);
     }
 
     @media screen and (min-device-pixel-ratio: 2) and ($tablet-min),
     screen and (min-resolution: 192dpi)and ($tablet-min),
     screen and (min-resolution: 2dppx) and ($tablet-min) {
-        background-image: url(../images/products/cardbg2-s@2x.jpg);
+        background-image: url(../images/products/productbg-m@2x.jpg);
     }
 
     @media screen and ($desktop-min) {
-        background-image: url(../images/products/cardbg3-s.jpg);
+        background-image: url(../images/products/productbg-l.jpg);
     }
 
     @media screen and (min-device-pixel-ratio: 2) and ($desktop-min),
     screen and (min-resolution: 192dpi)and ($desktop-min),
     screen and (min-resolution: 2dppx) and ($desktop-min) {
-        background-image: url(../images/products/cardbg3-s@2x.jpg);
+        background-image: url(../images/products/productbg-l@2x.jpg);
     }
 }
 
 .product__content {
+    display: block;
+    justify-content: center;
+    align-items: center;
+
     @media screen and ($mobile-min) {
         display: block;
         align-items: center;
@@ -58,26 +64,39 @@
 
 .product__title {
     font-family: 'Seymour One';
-    @include font(400, 30px, 1.36);
+    @include font(400, 20px, 1.36);
     color: var(--primary-color);
+    padding-bottom: 168px;
     text-align: center;
     letter-spacing: 0.04em;
     text-transform: uppercase;
 
     @media screen and ($mobile-min) {
+        font-weight: 400;
+        font-size: 30px;
+
+        text-align: center;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
         padding-bottom: 164px;
     }
 
 }
 
 .grid {
-
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    display: flexbox;
+    margin-right: auto;
+    margin-left: auto;
     justify-content: center;
 
-    @media screen and ($mobile-min) {}
+    @media screen and ($mobile-min) {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
 
     @media screen and ($tablet-min) {
         flex-wrap: nowrap;
@@ -86,6 +105,23 @@
         align-items: baseline;
     }
 }
+
+
+.grid__item::before {
+    position: absolute;
+    width: 100%;
+    max-width: 150px;
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    top: -35%;
+    left: 0;
+    border-radius: 50%;
+
+}
+
+
 
 @media screen and ($mobile-min) {
     .grid__item::before {
@@ -97,59 +133,75 @@
         top: -100px;
         left: 40px;
         border-radius: 50%;
-        box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+
     }
 
     .grid__item:nth-child(1)::before {
-        content: url(../images/products/product1-m.png);
+        content: url(../images/products/product1-s.png);
+        box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
     }
 
     .grid__item:nth-child(2)::before {
-        content: url(../images/products/product2-m.png);
+        content: url(../images/products/product2-s.png);
+        box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
     }
 
     .grid__item:nth-child(3)::before {
-        content: url(../images/products/product3-m.png);
+        content: url(../images/products/product3-s.png);
+        box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
     }
 }
 
 @media screen and (min-device-pixel-ratio: 2) and ($mobile-max),
 screen and (min-resolution: 192dpi)and ($mobile-max),
 screen and (min-resolution: 2dppx) and ($mobile-max) {
+    .grid__item::before {
+        width: 200px;
+        height: 200px;
+        background-size: contain;
+    }
+
     .grid__item:nth-child(1)::before {
-        content: url(../images/products/product1-m@2x.png);
-        // height: 200px;
+        content: '';
+        background-image: url(../images/products/product1-s@2x.png);
+
     }
 
     .grid__item:nth-child(2)::before {
-        content: url(../images/products/product2-m@2x.png);
-        // height: 200px;
+        content: '';
+        background-image: url(../images/products/product2-s@2x.png);
+
     }
 
     .grid__item:nth-child(3)::before {
-        content: url(../images/products/product3-m@2x.png);
-        // height: 200px;
+        content: '';
+        background-image: url(../images/products/product3-s@2x.png);
+
     }
 }
 
 @media screen and ($tablet-min) {
-    .grid__item {
-        height: 195px;
-        top: -110px;
+    .grid__item::before {
+        width: 200px;
+        height: 197px;
+        top: -120px;
         left: 12px;
     }
 
     .grid__item:nth-child(1)::before {
-        content: url(../images/products/product1-s.png);
+        content: '';
+        background-image: url(../images/products/product1-m@2x.png);
 
     }
 
     .grid__item:nth-child(2)::before {
-        content: url(../images/products/product2-s.png);
+        content: '';
+        background-image: url(../images/products/product2-m@2x.png);
     }
 
     .grid__item:nth-child(3)::before {
-        content: url(../images/products/product3-s.png);
+        content: '';
+        background-image: url(../images/products/product3-m@2x.png);
     }
 }
 
@@ -157,30 +209,43 @@ screen and (min-resolution: 2dppx) and ($mobile-max) {
 screen and (min-resolution: 192dpi)and ($tablet-min),
 screen and (min-resolution: 2dppx) and ($tablet-min) {
     .grid__item:nth-child(1)::before {
-        content: url(../images/products/product1-s@2x.png);
+        content: '';
+        background-image: url(../images/products/product1-m@2x.png);
     }
 
     .grid__item:nth-child(2)::before {
-        content: url(../images/products/product2-s@2x.png);
+        content: '';
+        background-image: url(../images/products/product2-m@2x.png);
     }
 
     .grid__item:nth-child(3)::before {
-        content: url(../images/products/product3-s@2x.png);
+        content: '';
+        background-image: url(../images/products/product3-m@2x.png);
     }
 }
 
 @media screen and ($desktop-min) {
+    .grid__item::before {
+        width: 300px;
+        height: 300px;
+        top: -150px;
+        left: 35px;
+    }
 
     .grid__item:nth-child(1)::before {
-        content: url(../images/products/product1-l.png);
+        content: '';
+        background-image: url(../images/products/product1-l.png);
+
     }
 
     .grid__item:nth-child(2)::before {
-        content: url(../images/products/product2-l.png);
+        content: '';
+        background-image: url(../images/products/product2-l.png);
     }
 
     .grid__item:nth-child(3)::before {
-        content: url(../images/products/product3-l.png);
+        content: '';
+        background-image: url(../images/products/product3-l.png);
     }
 }
 
@@ -189,15 +254,20 @@ screen and (min-resolution: 192dpi)and ($desktop-min),
 screen and (min-resolution: 2dppx) and ($desktop-min) {
 
     .grid__item:nth-child(1)::before {
-        content: url(../images/products/product1-l@2x.png);
+        content: '';
+        background-image: url(../images/products/product1-l@2x.png);
+
     }
 
     .grid__item:nth-child(2)::before {
-        content: url(../images/products/product2-l@2x.png);
+        content: '';
+        background-image: url(../images/products/product2-l@2x.png);
     }
 
     .grid__item:nth-child(3)::before {
-        content: url(../images/products/product3-l@2x.png);
+        content: '';
+        background-image: url(../images/products/product3-l@2x.png);
+
     }
 }
 
@@ -216,13 +286,16 @@ screen and (min-resolution: 2dppx) and ($desktop-min) {
 
     position: relative;
 
+    &::before {
+        background-size: contain;
+    }
 
 }
 
 .grid__item {
     align-items: baseline;
 
-    @media screen and ($mobile-min) {
+    @media screen and ($mobile-max) {
         &:not(:last-child) {
             margin-bottom: 164px;
         }
@@ -239,6 +312,12 @@ screen and (min-resolution: 2dppx) and ($desktop-min) {
 .production {
     border-radius: 24px;
     width: 100%;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding-top: 123px;
 
     @media screen and ($mobile-min) {
         max-width: 280px;
@@ -252,7 +331,12 @@ screen and (min-resolution: 2dppx) and ($desktop-min) {
         padding-bottom: 20px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: baseline;
+        // flex-grow: 1;
+        // align-items: baseline;
+        // height: 100%;
+        // justify-content: end;
+
     }
 
     @media screen and ($tablet-min) {
@@ -276,22 +360,32 @@ screen and (min-resolution: 2dppx) and ($desktop-min) {
 
 .production__name {
 
+
     @include font(700, 20px, 1.2);
     text-align: center;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--primary-color);
+    padding-bottom: 40px;
+    text-align: center;
 
     @media screen and ($mobile-min) {
-        text-align: center;
-        // padding-bottom: 40px;
+        font-size: 30px;
+    }
+
+    @media screen and ($tablet-min) {
+        padding-bottom: 40px;
+        font-size: 22px;
     }
 
     @media screen and ($desktop-min) {
         font-size: 30px;
+        padding-bottom: 65px;
     }
 
 }
+
+
 
 .production__description {
     @include font(400, 14px, 1.76);
@@ -299,10 +393,39 @@ screen and (min-resolution: 2dppx) and ($desktop-min) {
     letter-spacing: 0.04em;
     color: var(--primary-color);
 
+    @media screen and ($mobile-min) {
+        padding-bottom: 65px;
+    }
 
+
+    @media screen and ($tablet-min) {
+        padding-bottom: 30px;
+    }
 
     @media screen and ($desktop-min) {
         font-size: 16px;
+        padding-bottom: 70px;
+    }
+}
+
+.first-desc {
+    @media screen and ($mobile-min) {
+        padding-bottom: 115px;
+    }
+
+    @media screen and ($tablet-min) {
+        padding-bottom: 75px;
+    }
+
+    @media screen and ($desktop-min) {
+        padding-bottom: 95px;
+    }
+
+}
+
+.third-desc {
+    @media screen and ($tablet-min) {
+        padding-bottom: 60px;
     }
 }
 
