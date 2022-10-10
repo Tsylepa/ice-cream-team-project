@@ -1,9 +1,21 @@
+.customer-reviews {
+    padding-bottom: 48px;
+
+    @media screen and ($tablet-min) and ($tablet-max) {
+        padding-bottom: 80px;
+        }
+    
+    @media screen and ($desktop-min) {
+        padding-bottom: 100px;
+        }
+}
+
 .swiper-box {
     position: relative;
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
-
+    
     padding-bottom: 22px;
 
     .swiper-pagination {
