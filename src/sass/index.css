@@ -186,7 +186,7 @@ address {
   margin-left: 5px;
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .about__label {
     font-weight: 700;
     font-size: 18px;
