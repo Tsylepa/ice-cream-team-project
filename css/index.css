@@ -476,6 +476,7 @@ address {
     width: 100%;
     padding-bottom: 180px;
     padding-top: 120px;
+    padding-bottom: 204px;
   }
   .advantages__list {
     -webkit-box-orient: horizontal;
