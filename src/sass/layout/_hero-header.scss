@@ -3,14 +3,19 @@
   background-color: var(--main-theme-color);
 }
 .hero__container {
-  width: 100%;
   padding-left: 20px;
   padding-right: 20px;
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url('../images/hero+header/hero-bg-s.png');
+  
+  @media screen and ($mobile-max) {
+    max-width: $mobile;
+    background-size: contain;
+  }
 }
+
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
   screen and (min-resolution: 192dpi) and (max-width: 767px),
   screen and (min-resolution: 2dppx) and (max-width: 767px) {
