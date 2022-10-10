@@ -47,10 +47,10 @@
           <use href="./images/sprite/icons.svg#icon-burger"></use>
         </svg>
       </button>
-      <button class="button header__buy-button" type="button">Buy now</button>
+      <button class="button header__buy-button" type="button" aria-expanded="false">Buy now</button>
     </div>
   </div>
-  <div class="mobile-menu">
+  <div class="mobile-menu" data-menu>
     <div class="mobile-menu__container">
       <a href="#" class="logo logo__mobile-menu">
         <picture>
@@ -73,7 +73,7 @@
           />
         </picture>
       </a>
-      <button class="close-button">
+      <button class="close-button" aria-expanded="true" data-menu-close>
         <svg class="mobile-menu__close-button" width="32" height="32">
           <use href="./images/sprite/icons.svg#icon-close-button"></use>
         </svg>
@@ -101,7 +101,7 @@
             <a class="mobile-menu__link link" href="#contact">Contact</a>
           </li>
         </ul>
-        <button type="button" class="button mobile-menu__buy-button">
+        <button type="button" class="button mobile-menu__buy-button modal-open-button" href="#modal-win-buy">
           Buy now
         </button>
       </div>

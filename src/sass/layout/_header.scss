@@ -3,9 +3,9 @@
   text-decoration: none;
 }
 .header__section {
+  position: fixed;
   width: 100%;
   padding-top: 12px;
-  background-color: var(--main-theme-color);
 }
 .header__container {
   display: flex;
