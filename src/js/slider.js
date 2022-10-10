@@ -10,7 +10,7 @@ new Swiper('.swiper-box', {
     loop: true,
 
     autoplay: {
-        delay: 3000,
+        delay: 5000,
         disableOnInteraction: true
     },
     speed: 800,
