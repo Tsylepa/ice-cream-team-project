@@ -5,6 +5,7 @@
     border: 2px solid var(--accent-color);
     border-radius: 8px;
     background-color: var(--accent-color);
+    cursor: pointer;
     &:hover, &:focus {
         background-color: var(--button-hover-focus-color);
         border-color: var(--button-hover-focus-color);
@@ -19,6 +20,11 @@
 
     &--inverse {
         background-color: transparent !important;
+    }
+   
+    &__icon-arrow {
+        fill: currentColor;
+        margin-left: 5px;
     }
 
 }
