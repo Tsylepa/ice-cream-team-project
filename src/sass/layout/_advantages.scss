@@ -1,11 +1,11 @@
 .advantages {
     background-color: var(--main-theme-color);
+    padding-top: 108px;
     padding-bottom:60px;
     width: 100%;
 
     &__list {
         color: var(--secondary-color);
-        padding-top: 108px;
         padding-left: 45px;
         padding-right: 45px;
         display: flex;
@@ -81,11 +81,11 @@
     .advantages {
         width: 100%;
         padding-bottom: 204px;
+        padding-top: 130px;
 
         &__list {
             padding-left: 76px;
             padding-right: 76px;
-            padding-top: 48px;
             flex-direction: row;
             gap: 80px;
         }
@@ -132,9 +132,9 @@
     .advantages {
         width: 100%;
         padding-bottom: 180px;
+        padding-top: 150px;
 
         &__list {
-            padding-top: 60px;
             flex-direction: row;
             gap: 32px;
         }
