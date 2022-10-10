@@ -1,5 +1,4 @@
 @import './header';
-
 .hero__section {
   background-color: var(--main-theme-color);
   padding-top: 60px;
@@ -11,7 +10,7 @@
   padding-right: 20px;
   background-position: center bottom;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: auto;
   background-image: url('../images/hero+header/hero-bg-s.png');
 }
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
@@ -62,7 +61,6 @@
 .hero__title--important {
   @include font(400, 34px, 33px);
 }
-
 .hero__buttons {
   display: flex;
   gap: 8px;
@@ -116,7 +114,6 @@
     cursor: pointer;
   }
 }
-
 .cafes__list {
   display: block;
   height: 100%;
