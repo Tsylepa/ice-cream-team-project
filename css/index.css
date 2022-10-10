@@ -172,8 +172,7 @@ address {
 }
 
 .header-scroll {
-  background-color: var(--main-theme-color);
-  opacity: 0.8;
+  background-color: rgba(132, 161, 120, 0.8);
 }
 
 .header__container {
