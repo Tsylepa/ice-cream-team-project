@@ -112,11 +112,11 @@
 }
 
 @media screen and (max-width: 767px) {
-  .header__buy-btn {
+  .header__buy-button {
     display: none;
   }
 }
-.menu__btn {
+.menu__button {
   border: none;
   background-color: transparent;
   padding: 0;
@@ -129,7 +129,7 @@
   }
 }
 @media screen and (min-width: 1200px) {
-  .menu__btn {
+  .menu__button {
     display: none;
   }
 }
@@ -158,7 +158,7 @@
   visibility: visible;
   pointer-events: auto;
 }
-.close-btn {
+.close-button {
   position: absolute;
   top: 16px;
   right: 20px;
@@ -201,10 +201,10 @@
 .mobile-menu__link--current {
   color: var(--primary-color);
 }
-.mobile-menu__buy-btn {
+.mobile-menu__buy-button {
   margin-top: auto;
 }
-// .menu__btn {
+// .menu__button {
 //   display: none;
 // }
 .hero__section {
@@ -380,7 +380,7 @@
     margin-left: 256px;
   }
 }
-.hero__arrow-btn .hero__arrow-default {
+.hero__arrow-button .hero__arrow-default {
   padding: 10px 0;
   border: none;
   font-family: var(--primary-font);
@@ -394,8 +394,8 @@
     cursor: pointer;
   }
 }
-// .hero__arrow-btn > .hero__arrow-default {}
-// .hero__arrow-btn {}
+// .hero__arrow-button > .hero__arrow-default {}
+// .hero__arrow-button {}
 
 @media screen and (max-width: 767px) {
   .hero__right-thumb {
