@@ -1,6 +1,8 @@
 @import './utils/variables';
 @import './utils/mixins';
+@import './utils/placeholders';
 @import './utils/visually-hidden';
+@import './utils/placeholders';
 
 @import './base/common';
 @import './base/container';
@@ -14,3 +16,7 @@
 @import './layout/customer-reviews';
 @import './layout/contacts';
 @import './layout/footer';
+
+@import './components/backdrop';
+@import './components/modal';
+@import './components/buttons';

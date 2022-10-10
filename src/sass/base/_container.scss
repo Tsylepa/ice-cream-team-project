@@ -11,7 +11,13 @@
     max-width: $mobile;
   }
 
-  @media screen and (tablet-min) and ($tablet-max) {
+  @media screen and ($mobile-max) {
+      max-width: $mobile;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    
+  @media screen and ($tablet-min) and ($tablet-max) {
     width: $tablet;
     padding-left: 32px;
     padding-right: 32px;
