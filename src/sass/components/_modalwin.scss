@@ -42,6 +42,12 @@
   margin-right: auto;
 }
 
+.form-modal__check {
+  position: absolute;
+  appearance: none;
+  // display: none;
+}
+
 .form-modal__field {
   display: block;
   width: 100%;
@@ -248,15 +254,27 @@
   border: 2px solid #96af8c;
   filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
   border-radius: 15.7808px;
+
+  .form-modal__check:checked + & {
+    background-color: #96af8c;
+  }
 }
 
 .modal__rect-product_ch-color-two {
   border-color: #efd478;
+
+  .form-modal__check:checked + & {
+    background-color: #efd478;
+  }
 }
 
 .modal__rect-product_ch-color {
   margin-bottom: 24px;
   border-color: var(--palette-color-1);
+
+  .form-modal__check:checked + & {
+    background-color: var(--palette-color-1);
+  }
 
   @media screen and ($tablet-min) {
     margin-bottom: 0;
@@ -267,8 +285,8 @@
   position: absolute;
   z-index: 0;
   top: -50%;
-  width: 132px;
-  height: 132px;
+  width: 130px;
+  height: 137px;
   border-radius: 50%;
 
   background: linear-gradient(
@@ -304,7 +322,7 @@
   position: absolute;
   z-index: 1;
   top: -50%;
-  left: 2px;
+  left: 1px;
 }
 
 .modal__name-product {
