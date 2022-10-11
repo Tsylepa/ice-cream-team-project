@@ -1039,6 +1039,7 @@ address {
 
 .about {
   background-color: var(--main-theme-color);
+  padding-bottom: 0;
 }
 .about__label {
   font-family: var(--primary-font);
@@ -1056,6 +1057,7 @@ address {
 
 .about-description {
   display: flex;
+  padding-bottom: 45px;
 }
 .about-description__img {
   display: flex;
@@ -1085,15 +1087,11 @@ address {
   align-items: center;
 }
 .about-description__button {
-  margin-top: 20px;
   display: flex;
   align-items: center;
 }
 
 @media screen and (max-width: 767px) {
-  .about {
-    padding-bottom: 55px;
-  }
   .about__label {
     font-weight: 700;
     font-size: 18px;
@@ -1121,13 +1119,10 @@ address {
     padding: 0 50px;
   }
   .about-description__button {
-    margin-top: 48px;
+    margin-top: 20px;
   }
 }
 @media screen and (min-width: 768px) {
-  .about {
-    padding-bottom: 65px;
-  }
   .about__label {
     font-weight: 800;
     font-size: 22px;
@@ -1137,6 +1132,7 @@ address {
     font-size: 34px;
   }
   .about-description {
+    padding-bottom: 50px;
     flex-direction: row;
   }
   .about-description__wrapper {
@@ -1157,11 +1153,11 @@ address {
   .about-description__info p:not(:last-child) {
     margin-bottom: 8px;
   }
+  .about-description__button {
+    margin-top: 48px;
+  }
 }
 @media screen and (min-width: 1200px) {
-  .about {
-    padding-bottom: 120px;
-  }
   .about__label {
     font-weight: 800;
     font-size: 30px;
@@ -1169,6 +1165,9 @@ address {
   .about__title {
     margin-bottom: 82px;
     font-size: 36px;
+  }
+  .about-description {
+    padding-bottom: 60px;
   }
   .about-description__wrapper {
     margin-right: 100px;
@@ -1261,7 +1260,7 @@ address {
   .advantages {
     width: 100%;
     padding-bottom: 205px;
-    padding-top: 130px;
+    padding-top: 65px;
   }
   .advantages__list {
     padding-left: 76px;
