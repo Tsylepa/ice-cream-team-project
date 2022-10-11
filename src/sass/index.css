@@ -60,10 +60,30 @@
 body {
   color: var(--primary-color);
   font-family: var(--primary-font);
-  background-image: url(../images/background/productbg-1920.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: repeat-y;
+  background-image: url("../images/background/productbg-1920.jpg");
+}
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  body {
+    background-image: url("../images/background/productbg-1920@2x.jpg");
+  }
+}
+@media screen and (max-width: 767px) {
+  body {
+    max-width: 787px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  body {
+    max-width: 1199;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    max-width: 1900;
+  }
 }
 
 ul,
@@ -98,8 +118,6 @@ address {
 .container {
   display: inherit;
   width: 100vw;
-  padding-left: 20px;
-  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
   align-items: inherit;
@@ -152,9 +170,13 @@ address {
 }
 
 .header__section {
+  position: fixed;
   width: 100%;
-  padding-top: 12px;
-  background-color: var(--main-theme-color);
+  z-index: 100;
+}
+
+.header-scroll {
+  background-color: rgba(132, 161, 120, 0.9);
 }
 
 .header__container {
@@ -177,6 +199,7 @@ address {
 }
 
 .logo-img {
+  padding: 7px 0;
   min-width: 40px;
   min-height: 37px;
 }
@@ -285,9 +308,6 @@ address {
   }
 }
 @media screen and (min-width: 768px) {
-  .header__section {
-    padding-top: 20px;
-  }
   .header__container {
     width: 768px;
     padding-left: 32px;
@@ -312,9 +332,6 @@ address {
   }
 }
 @media screen and (min-width: 1200px) {
-  .header__section {
-    padding-top: 8px;
-  }
   .header__container {
     width: 1200px;
     padding-left: 16px;
@@ -355,8 +372,13 @@ address {
   background-size: cover;
 }
 @media screen and (max-width: 767px) {
+<<<<<<< Updated upstream
   .product {
     background-image: url(../images/products/cardbg1-s.jpg);
+=======
+  .hero__container {
+    max-width: 480px;
+>>>>>>> Stashed changes
   }
 }
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
@@ -365,8 +387,20 @@ address {
   }
 }
 @media screen and (min-width: 768px) {
+<<<<<<< Updated upstream
   .product {
     background-image: url(../images/products/cardbg2-s.jpg);
+=======
+  .hero__container {
+    width: 768px;
+    padding-top: 114px;
+    padding-bottom: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 74px;
+    background-size: contain;
+    background-image: url("../images/hero+header/hero-bg-m.png");
+>>>>>>> Stashed changes
   }
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
@@ -437,6 +471,7 @@ address {
 }
 
 @media screen and (min-width: 480px) {
+<<<<<<< Updated upstream
   .grid__item::before {
     position: absolute;
     width: 100%;
@@ -456,6 +491,11 @@ address {
   }
   .grid__item:nth-child(3)::before {
     content: url(../images/products/product3-s.png);
+=======
+  .hero__container {
+    margin-left: auto;
+    margin-right: auto;
+>>>>>>> Stashed changes
   }
 }
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
@@ -482,6 +522,7 @@ address {
   }
 }
 @media screen and (min-width: 768px) {
+<<<<<<< Updated upstream
   .grid__item {
     height: 195px;
     top: -110px;
@@ -489,6 +530,10 @@ address {
   }
   .grid__item:nth-child(1)::before {
     content: url(../images/products/product1-m.png);
+=======
+  .hero__wrapper {
+    margin-bottom: 56px;
+>>>>>>> Stashed changes
   }
   .grid__item:nth-child(2)::before {
     content: url(../images/products/product2-m.png);
@@ -501,8 +546,270 @@ address {
   .grid__item:nth-child(1)::before {
     content: url(../images/products/product1-m@2x.png);
   }
+<<<<<<< Updated upstream
   .grid__item:nth-child(2)::before {
     content: url(../images/products/product2-m@2x.png);
+=======
+  .hero__text {
+    margin-bottom: 10px;
+    width: 151px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+    color: var(--secondary-color);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__container {
+    width: 1200px;
+    padding-top: 115px;
+    padding-bottom: 111px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .hero__wrapper {
+    margin-bottom: 110px;
+  }
+  .hero__title--important,
+.hero__title {
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 48px;
+  }
+  .hero__title {
+    margin-bottom: 28px;
+  }
+  .hero__buttons {
+    gap: 12px;
+  }
+  .button__products {
+    padding: 12px 34px;
+    border-radius: 10px;
+    min-width: 66px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .button__how-its-made {
+    padding: 12px 22px;
+    min-width: 154px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .hero__bottom-part {
+    margin-left: 256px;
+  }
+  .hero__text {
+    width: 200px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .cafes__list {
+    gap: 16px;
+  }
+  .cafes__number {
+    font-weight: 900;
+    font-size: 46px;
+    line-height: 56px;
+  }
+  .cafes__name {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+.product {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 210px) and (max-width: 767px) {
+  .product {
+    background-image: url(../images/products/cardbg1-s.jpg);
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 210px) and (max-width: 767px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 210px) and (max-width: 767px), screen and (min-resolution: 192dpi) and (min-width: 210px) and (max-width: 767px), screen and (min-resolution: 2dppx) and (min-width: 210px) and (max-width: 767px) {
+  .product {
+    background-image: url(../images/products/cardbg1-s@2x.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .product {
+    background-image: url(../images/products/productbg-m.jpg);
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .product {
+    background-image: url(../images/products/productbg-m@2x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .product {
+    background-image: url(../images/products/productbg-l.jpg);
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .product {
+    background-image: url(../images/products/productbg-l@2x.jpg);
+  }
+}
+
+.product__content {
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 480px) {
+  .product__content {
+    display: block;
+    align-items: center;
+  }
+}
+.product__label {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.22;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+@media screen and (min-width: 480px) {
+  .product__label {
+    padding-bottom: 12px;
+  }
+}
+
+.product__title {
+  font-family: "Seymour One";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.36;
+  color: var(--primary-color);
+  padding-bottom: 168px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 480px) {
+  .product__title {
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding-bottom: 164px;
+  }
+}
+
+.grid {
+  display: flexbox;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+}
+@media screen and (min-width: 480px) {
+  .grid {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .grid {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+  }
+}
+
+.grid__item::before {
+  position: absolute;
+  width: 100%;
+  max-width: 150px;
+  height: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  top: -35%;
+  left: 0;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 480px) {
+  .grid__item::before {
+    position: absolute;
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    display: block;
+    top: -100px;
+    left: 40px;
+    border-radius: 50%;
+  }
+  .grid__item:nth-child(1)::before {
+    content: url(../images/products/product1-s.png);
+    box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+  }
+  .grid__item:nth-child(2)::before {
+    content: url(../images/products/product2-s.png);
+    box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+  }
+  .grid__item:nth-child(3)::before {
+    content: url(../images/products/product3-s.png);
+    box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  .grid__item::before {
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+  }
+  .grid__item:nth-child(1)::before {
+    content: "";
+    background-image: url(../images/products/product1-s@2x.png);
+  }
+  .grid__item:nth-child(2)::before {
+    content: "";
+    background-image: url(../images/products/product2-s@2x.png);
+  }
+  .grid__item:nth-child(3)::before {
+    content: "";
+    background-image: url(../images/products/product3-s@2x.png);
+  }
+}
+@media screen and (min-width: 768px) {
+  .grid__item::before {
+    width: 200px;
+    height: 197px;
+    top: -120px;
+    left: 12px;
+  }
+  .grid__item:nth-child(1)::before {
+    content: "";
+    background-image: url(../images/products/product1-m@2x.png);
+  }
+  .grid__item:nth-child(2)::before {
+    content: "";
+    background-image: url(../images/products/product2-m@2x.png);
+  }
+  .grid__item:nth-child(3)::before {
+    content: "";
+    background-image: url(../images/products/product3-m@2x.png);
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .grid__item:nth-child(1)::before {
+    content: "";
+    background-image: url(../images/products/product1-m@2x.png);
+  }
+  .grid__item:nth-child(2)::before {
+    content: "";
+    background-image: url(../images/products/product2-m@2x.png);
+>>>>>>> Stashed changes
   }
   .grid__item:nth-child(3)::before {
     content: url(../images/products/product3-m@2x.png);
@@ -1142,7 +1449,7 @@ address {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .advantages {
     width: 100%;
-    padding-bottom: 65px;
+    padding-bottom: 205px;
     padding-top: 130px;
   }
   .advantages__list {
@@ -1977,7 +2284,7 @@ address {
 }
 .backdrop {
   position: fixed;
-  z-index: 10;
+  z-index: 99999;
   width: 100%;
   height: 100%;
   top: 0;
@@ -2029,6 +2336,7 @@ address {
   width: 16px;
   height: 16px;
   fill: var(--primary-color);
+  cursor: pointer;
 }
 .modal__close:hover, .modal__close:focus {
   fill: var(--button-hover-focus-color);
