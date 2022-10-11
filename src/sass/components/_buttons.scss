@@ -1,48 +1,90 @@
 .button {
-    @extend %flexCenter;
-    @include font(600, 14px, 1.29);
-    padding: 12px 34px;
+  @extend %flexCenter;
+  &--products {
+    @include font(600, 8px, 10px);
+    padding: 5px 10px;
     border: 2px solid var(--accent-color);
     border-radius: 8px;
-    background-color: var(--accent-color);
-    cursor: pointer;
-    &:hover, &:focus {
-        background-color: var(--button-hover-focus-color);
-        border-color: var(--button-hover-focus-color);
+    background-color: transparent;
+    color: var(--black-color);
+    &:hover,
+    :focus {
+      border-color: var(--button-hover-focus-color);
     }
     &:focus {
-        color: var(--secondary-color);
+      color: var(--secondary-color);
     }
     &:disabled {
-        background-color: var(--button-disabled);
-        border-color: var(--button-disabled);
+      border-color: var(--pale-color);
     }
-
-    &--inverse {
-        background-color: transparent !important;
+  }
+  &--made {
+    @include font(600, 8px, 10px);
+    color: var(--accent-color);
+    text-decoration-line: underline;
+    background-color: transparent;
+    border: 0px;
+    &:hover {
+      color: var(--button-hover-focus-color);
     }
-   
-    &__icon-arrow {
-        fill: currentColor;
-        margin-left: 5px;
+    &:focus {
+      color: var(--secondary-color);
     }
-
+    &:disabled {
+      color: var(--pale-color);
+    }
+  }
+  &--default {
+    @include font(600, 14px, 18px);
+    padding: 12px 34px;
+    border-radius: 10px;
+    border: 0px;
+    color: var(--black-color);
+    background: var(--accent-color);
+    &:hover,
+    :focus {
+      background: var(--button-hover-focus-color);
+    }
+    &:focus {
+      color: var(--secondary-color);
+    }
+    &:disabled {
+      background-color: var(--pale-color);
+    }
+  }
+  &--franchise {
+    @include font(600, 14px, 18px);
+    padding: 12px 46px;
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+    background-color: transparent;
+    &:hover,
+    :focus {
+      border-color: var(--button-hover-focus-color);
+      color: var(--black-color);
+    }
+    &:focus {
+      color: var(--secondary-color);
+    }
+    &:disabled {
+      border-color: var(--pale-color);
+    }
+  }
+  &__icon-arrow {
+    fill: currentColor;
+    margin-left: 5px;
+  }
 }
 
-.button--anchor {
-    background-color: transparent;
-    border: none;
-    text-decoration: underline;
-    @include font(600, 14px, 1.29);
-    &:hover {
-        color: var(--button-hover-focus-color);
-        text-decoration: none;
+@media screen and ($desktop-min) {
+  .button {
+    &--products {
+      @include font(600, 14px, 18px);
+      padding: 12px 34px;
+      border-radius: 10px;
     }
-    &:focus {
-        color: var(--secondary-color);
-        text-decoration: none;
+    &--made {
+      @include font(600, 14px, 17px);
     }
-    &:disabled {
-        color: var(--button-disabled);
-    }
+  }
 }
