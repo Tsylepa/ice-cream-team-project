@@ -1,18 +1,18 @@
-.product {
-    background-size: contain;
-    background-repeat: no-repeat;
+// .product {
+//     background-size: contain;
+//     background-repeat: no-repeat;
 
 
-    @media screen and (min-width:210px) and ($mobile-max) {
-        background-image: url(../images/products/cardbg1-s.jpg);
-    }
+//     @media screen and (min-width:210px) and ($mobile-max) {
+//         background-image: url(../images/products/cardbg1-s.jpg);
+//     }
 
-    @media screen and (min-device-pixel-ratio: 2) and (min-width:210px) and ($mobile-max),
-    screen and (min-resolution: 192dpi)and (min-width:210px) and($mobile-max),
-    screen and (min-resolution: 2dppx) and (min-width:210px) and($mobile-max) {
-        background-image: url(../images/products/cardbg1-s@2x.jpg);
-    }
-}
+//     @media screen and (min-device-pixel-ratio: 2) and (min-width:210px) and ($mobile-max),
+//     screen and (min-resolution: 192dpi)and (min-width:210px) and($mobile-max),
+//     screen and (min-resolution: 2dppx) and (min-width:210px) and($mobile-max) {
+//         background-image: url(../images/products/cardbg1-s@2x.jpg);
+//     }
+// }
 
 .product__content {
     display: block;
