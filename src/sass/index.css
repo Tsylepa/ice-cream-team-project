@@ -375,7 +375,6 @@ address {
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 110px;
-  height: 500px;
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: contain;
@@ -384,6 +383,7 @@ address {
 @media screen and (max-width: 767px) {
   .hero__container {
     max-width: 480px;
+    min-height: 500px;
   }
 }
 
@@ -539,9 +539,6 @@ address {
   }
 }
 @media screen and (max-width: 767px) {
-  .hero__container {
-    min-height: 402px;
-  }
   .hero__bottom-part {
     display: none;
   }
@@ -550,6 +547,9 @@ address {
   }
 }
 @media screen and (min-width: 768px) {
+  .hero__container {
+    height: auto;
+  }
   .hero__wrapper {
     margin-bottom: 56px;
   }
