@@ -59,6 +59,15 @@
         padding-bottom: 164px;
     }
 
+    @media screen and ($tablet-min) {
+        padding-bottom: 200px;
+    }
+
+    @media screen and ($desktop-min) {
+        font-size: 36px;
+        padding-bottom: 303px;
+    }
+
 }
 
 .grid {
@@ -385,7 +394,7 @@ screen and (min-resolution: 2dppx) and ($desktop-min) {
 
     @media screen and ($desktop-min) {
         font-size: 16px;
-        padding-bottom: 70px;
+        padding-bottom: 65px;
     }
 }
 
