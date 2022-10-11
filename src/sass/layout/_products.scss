@@ -62,13 +62,13 @@
 }
 
 .grid {
-    display: flexbox;
-    margin-right: auto;
-    margin-left: auto;
-    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
     @media screen and ($mobile-min) {
         display: flex;
+        flex-direction: row;
         align-items: center;
         flex-wrap: wrap;
         justify-content: center;
@@ -87,14 +87,15 @@
 
 .grid__item::before {
     position: absolute;
-    width: 100%;
-    max-width: 150px;
-    height: 150px;
+    // width: 100%;
+    // max-width: 200px;
+    // height: 200px;
     background-size: contain;
     background-repeat: no-repeat;
     display: block;
     top: -35%;
-    left: 0;
+    left: 15%;
+    translate: (35%, -15%);
     border-radius: 50%;
 
 }
@@ -291,6 +292,8 @@ screen and (min-resolution: 2dppx) and ($desktop-min) {
     border-radius: 24px;
     width: 100%;
     max-width: 280px;
+    padding-left: 20px;
+    padding-right: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -372,7 +375,7 @@ screen and (min-resolution: 2dppx) and ($desktop-min) {
     color: var(--primary-color);
 
     @media screen and ($mobile-min) {
-        padding-bottom: 65px;
+        padding-bottom: 55px;
     }
 
 
@@ -388,7 +391,7 @@ screen and (min-resolution: 2dppx) and ($desktop-min) {
 
 .first-desc {
     @media screen and ($mobile-min) {
-        padding-bottom: 115px;
+        padding-bottom: 105px;
     }
 
     @media screen and ($tablet-min) {
