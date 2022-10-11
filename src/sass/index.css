@@ -375,7 +375,6 @@ address {
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 110px;
-  height: 500px;
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: contain;
@@ -384,6 +383,7 @@ address {
 @media screen and (max-width: 767px) {
   .hero__container {
     max-width: 480px;
+    min-height: 500px;
   }
 }
 
@@ -539,9 +539,6 @@ address {
   }
 }
 @media screen and (max-width: 767px) {
-  .hero__container {
-    min-height: 402px;
-  }
   .hero__bottom-part {
     display: none;
   }
@@ -550,6 +547,9 @@ address {
   }
 }
 @media screen and (min-width: 768px) {
+  .hero__container {
+    height: auto;
+  }
   .hero__wrapper {
     margin-bottom: 56px;
   }
@@ -638,41 +638,6 @@ address {
     line-height: 17px;
   }
 }
-.product {
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-@media screen and (min-width: 210px) and (max-width: 767px) {
-  .product {
-    background-image: url(../images/products/cardbg1-s.jpg);
-  }
-}
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 210px) and (max-width: 767px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 210px) and (max-width: 767px), screen and (min-resolution: 192dpi) and (min-width: 210px) and (max-width: 767px), screen and (min-resolution: 2dppx) and (min-width: 210px) and (max-width: 767px) {
-  .product {
-    background-image: url(../images/products/cardbg1-s@2x.jpg);
-  }
-}
-@media screen and (min-width: 768px) {
-  .product {
-    background-image: url(../images/products/productbg-m.jpg);
-  }
-}
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
-  .product {
-    background-image: url(../images/products/productbg-m@2x.jpg);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .product {
-    background-image: url(../images/products/productbg-l.jpg);
-  }
-}
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
-  .product {
-    background-image: url(../images/products/productbg-l@2x.jpg);
-  }
-}
-
 .product__content {
   display: block;
   justify-content: center;
@@ -684,6 +649,7 @@ address {
     align-items: center;
   }
 }
+
 .product__label {
   font-weight: 800;
   font-size: 18px;
@@ -719,16 +685,27 @@ address {
     padding-bottom: 164px;
   }
 }
+@media screen and (min-width: 768px) {
+  .product__title {
+    padding-bottom: 200px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .product__title {
+    font-size: 36px;
+    padding-bottom: 303px;
+  }
+}
 
 .grid {
-  display: flexbox;
-  margin-right: auto;
-  margin-left: auto;
-  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 @media screen and (min-width: 480px) {
   .grid {
     display: flex;
+    flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
@@ -745,14 +722,12 @@ address {
 
 .grid__item::before {
   position: absolute;
-  width: 100%;
-  max-width: 150px;
-  height: 150px;
   background-size: contain;
   background-repeat: no-repeat;
   display: block;
   top: -35%;
-  left: 0;
+  left: 15%;
+  translate: 35%, -15%;
   border-radius: 50%;
 }
 
@@ -901,6 +876,8 @@ address {
   border-radius: 24px;
   width: 100%;
   max-width: 280px;
+  padding-left: 20px;
+  padding-right: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -978,7 +955,7 @@ address {
 }
 @media screen and (min-width: 480px) {
   .production__description {
-    padding-bottom: 65px;
+    padding-bottom: 55px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -989,13 +966,13 @@ address {
 @media screen and (min-width: 1200px) {
   .production__description {
     font-size: 16px;
-    padding-bottom: 70px;
+    padding-bottom: 65px;
   }
 }
 
 @media screen and (min-width: 480px) {
   .first-desc {
-    padding-bottom: 115px;
+    padding-bottom: 105px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1039,6 +1016,7 @@ address {
 
 .about {
   background-color: var(--main-theme-color);
+  padding-bottom: 0;
 }
 .about__label {
   font-family: var(--primary-font);
@@ -1056,6 +1034,7 @@ address {
 
 .about-description {
   display: flex;
+  padding-bottom: 45px;
 }
 .about-description__img {
   display: flex;
@@ -1085,15 +1064,11 @@ address {
   align-items: center;
 }
 .about-description__button {
-  margin-top: 20px;
   display: flex;
   align-items: center;
 }
 
 @media screen and (max-width: 767px) {
-  .about {
-    padding-bottom: 55px;
-  }
   .about__label {
     font-weight: 700;
     font-size: 18px;
@@ -1121,13 +1096,10 @@ address {
     padding: 0 50px;
   }
   .about-description__button {
-    margin-top: 48px;
+    margin-top: 20px;
   }
 }
 @media screen and (min-width: 768px) {
-  .about {
-    padding-bottom: 65px;
-  }
   .about__label {
     font-weight: 800;
     font-size: 22px;
@@ -1137,6 +1109,7 @@ address {
     font-size: 34px;
   }
   .about-description {
+    padding-bottom: 50px;
     flex-direction: row;
   }
   .about-description__wrapper {
@@ -1157,11 +1130,11 @@ address {
   .about-description__info p:not(:last-child) {
     margin-bottom: 8px;
   }
+  .about-description__button {
+    margin-top: 48px;
+  }
 }
 @media screen and (min-width: 1200px) {
-  .about {
-    padding-bottom: 120px;
-  }
   .about__label {
     font-weight: 800;
     font-size: 30px;
@@ -1169,6 +1142,9 @@ address {
   .about__title {
     margin-bottom: 82px;
     font-size: 36px;
+  }
+  .about-description {
+    padding-bottom: 60px;
   }
   .about-description__wrapper {
     margin-right: 100px;
@@ -1261,7 +1237,7 @@ address {
   .advantages {
     width: 100%;
     padding-bottom: 205px;
-    padding-top: 130px;
+    padding-top: 65px;
   }
   .advantages__list {
     padding-left: 76px;
