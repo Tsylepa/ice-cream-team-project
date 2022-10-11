@@ -46,8 +46,7 @@
 
 @media screen and ($tablet-min) {
   .modal {
-    width: 568px;
-    max-width: 568px;
+    width: 564px;
     padding: 32px 60px;
 
     &__heading {
@@ -56,6 +55,7 @@
 
     &__iframe {
       margin-top: 32px;
+      height: 260px;
     }
 
     &__description {

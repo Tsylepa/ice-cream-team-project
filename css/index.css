@@ -2198,8 +2198,7 @@ address {
 
 @media screen and (min-width: 768px) {
   .modal {
-    width: 568px;
-    max-width: 568px;
+    width: 564px;
     padding: 32px 60px;
   }
   .modal__heading {
@@ -2209,6 +2208,7 @@ address {
   }
   .modal__iframe {
     margin-top: 32px;
+    height: 260px;
   }
   .modal__description {
     margin-top: 32px;
