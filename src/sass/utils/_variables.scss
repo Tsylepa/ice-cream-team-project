@@ -12,14 +12,15 @@
   --palette-color-3: #d6936d;
   --rights-color: #7a7a7a;
   --border-color: #e1e1e1;
-  --pale-color: #ABABAB;
+  --pale-color: #ababab;
+  --black-color: #000000;
 }
 
 $mobile: 480px;
 $tablet: 768px;
 $desktop: 1200px;
-$mobile-min: 'min-width:'$mobile;
+$mobile-min: 'min-width:' $mobile;
 $mobile-max: 'max-width:' calc($tablet - 1px);
-$tablet-min: 'min-width:'$tablet;
+$tablet-min: 'min-width:' $tablet;
 $tablet-max: 'max-width:' calc($desktop - 1px);
-$desktop-min: 'min-width:'$desktop;
+$desktop-min: 'min-width:' $desktop;
