@@ -2340,7 +2340,11 @@ address {
   color: var(--primary-color);
 }
 
+.button {
+  cursor: pointer;
+}
 .button--products {
+  cursor: pointer;
   font-weight: 600;
   font-size: 8px;
   line-height: 10px;
@@ -2364,6 +2368,7 @@ address {
   font-weight: 600;
   font-size: 8px;
   line-height: 10px;
+  cursor: pointer;
   color: var(--accent-color);
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -2383,6 +2388,7 @@ address {
   font-weight: 600;
   font-size: 14px;
   line-height: 18px;
+  cursor: pointer;
   padding: 12px 34px;
   border-radius: 10px;
   border: 0px;
@@ -2403,6 +2409,7 @@ address {
   font-weight: 600;
   font-size: 14px;
   line-height: 18px;
+  cursor: pointer;
   padding: 10px 44px;
   border: 2px solid var(--accent-color);
   border-radius: 10px;
@@ -2420,6 +2427,7 @@ address {
   border-color: var(--pale-color);
 }
 .button__icon-arrow {
+  cursor: pointer;
   fill: currentColor;
   margin-left: 5px;
 }
