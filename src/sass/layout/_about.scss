@@ -1,5 +1,6 @@
 .about {
     background-color: var(--main-theme-color);
+    padding-bottom: 0;
 
     &__label {
         font-family: var(--primary-font);
@@ -19,7 +20,8 @@
 }
 
 .about-description {
-      display: flex;
+        display: flex;
+        padding-bottom: 45px;
 
     &__img {
         display: flex;
@@ -57,7 +59,6 @@
     }
 
     &__button {
-        margin-top: 20px;
         display: flex;
         align-items: center;
     }
@@ -67,7 +68,6 @@
 
 @media screen and ($mobile-max) {
     .about {
-        padding-bottom: 55px;
 
         &__label {
             font-weight: 700;
@@ -101,7 +101,7 @@
         }
 
         &__button {
-            margin-top: 48px;
+            margin-top: 20px;
         }
     }
 }
@@ -110,7 +110,6 @@
  @media screen and ($tablet-min) {
 
     .about {  
-        padding-bottom: 65px;
 
         &__label {
             font-weight: 800;
@@ -124,6 +123,7 @@
     }
 
     .about-description {
+        padding-bottom: 50px;
         flex-direction: row;
 
         &__wrapper {
@@ -151,13 +151,16 @@
                 }
             }
         }
+
+        &__button {
+            margin-top: 48px;
+        }
     }
 
 }
 
 @media screen and ($desktop-min) {
     .about {
-        padding-bottom: 120px;
 
         &__label {
             font-weight: 800;
@@ -171,6 +174,8 @@
     }
 
     .about-description {
+        padding-bottom: 60px;
+
         &__wrapper {
             margin-right: 100px;
         }
