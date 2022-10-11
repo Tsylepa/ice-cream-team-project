@@ -9,7 +9,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url('../images/hero+header/hero-bg-s.png');
-  
+
   @media screen and ($mobile-max) {
     max-width: $mobile;
   }
@@ -29,7 +29,7 @@
     padding-bottom: 32px;
     padding-left: 32px;
     padding-right: 32px;
-    
+
     padding-top: 74px;
     background-size: contain;
     background-image: url('../images/hero+header/hero-bg-m.png');
@@ -73,6 +73,7 @@
 }
 .hero__buttons {
   display: flex;
+  align-items: center;
   gap: 8px;
 }
 .button__products {
@@ -187,7 +188,6 @@
   }
 }
 @media screen and (min-width: 1200px) {
-
   .hero__container {
     width: 1200px;
     padding-top: 115px;
