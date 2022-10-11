@@ -18,7 +18,7 @@ for (var i = 0; i < btn.length; i++) {
 
 // When the user clicks on <span> (x), close the modal
 for (var i = 0; i < close.length; i++) {
-  close[i].onclick = function () {
+  close[i].onclick = function (e) {
     for (var index in modals) {
       if (typeof modals[index].style !== 'undefined')
         modals[index].classList.add('is-hidden');

@@ -130,8 +130,6 @@ address {
 .container {
   display: inherit;
   width: 100vw;
-  padding-left: 20px;
-  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
   -webkit-box-align: inherit;
