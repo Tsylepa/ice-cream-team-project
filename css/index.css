@@ -429,7 +429,6 @@ address {
 @media screen and (max-width: 767px) {
   .hero__container {
     max-width: 480px;
-    background-size: contain;
   }
 }
 
@@ -446,6 +445,7 @@ address {
     padding-left: 32px;
     padding-right: 32px;
     padding-top: 74px;
+    background-size: contain;
     background-image: url("../images/hero+header/hero-bg-m.png");
   }
 }
