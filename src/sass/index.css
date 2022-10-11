@@ -18,7 +18,7 @@
   --black-color: #000000;
 }
 
-.button, .modal__text-nutrval-name, .modal__circle, .modal, .backdrop, .social__link, .footer__rights--text, .gallery__wrapper {
+.button--franchise, .button--default, .button--made, .button--products, .modal__text-nutrval-name, .modal__circle, .modal, .backdrop, .social__link, .footer__rights--text, .gallery__wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,7 +43,7 @@
   clip: rect(0 0 0 0);
 }
 
-.button, .modal__text-nutrval-name, .modal__circle, .modal, .backdrop, .social__link, .footer__rights--text, .gallery__wrapper {
+.button--franchise, .button--default, .button--made, .button--products, .modal__text-nutrval-name, .modal__circle, .modal, .backdrop, .social__link, .footer__rights--text, .gallery__wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2340,9 +2340,6 @@ address {
   color: var(--primary-color);
 }
 
-.button {
-  cursor: pointer;
-}
 .button--products {
   cursor: pointer;
   font-weight: 600;
