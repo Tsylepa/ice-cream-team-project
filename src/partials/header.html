@@ -1,0 +1,120 @@
+<header class="header__section" id="header">
+  <div class="header__container">
+    <a href="#" class="logo">
+      <picture>
+        <source
+          srcset="./images/logo/logo-l.png 1x, ./images/logo/logo-l@2x.png 2x"
+          media="(min-width: 1200px)"
+        />
+        <source
+          srcset="./images/logo/logo-m.png 1x, ./images/logo/logo-m@2x.png 2x"
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="./images/logo/logo-s.png 1x, ./images/logo/logo-s@2x.png 2x"
+          media="(min-width: 480px)"
+        />
+        <img
+          class="logo-img"
+          src="./images/logo/logo-s.png"
+          alt="Logo ice-cream"
+        />
+      </picture>
+    </a>
+    <ul class="header-pages__list list">
+      <li class="header-pages__item">
+        <a
+          class="header-pages__link link header-pages__link--current link"
+          href="#home"
+          >Home</a
+        >
+      </li>
+      <li class="header-pages__item">
+        <a class="header-pages__link link" href="#how-it's-made?"
+          >How it’s made?</a
+        >
+      </li>
+      <li class="header-pages__item">
+        <a class="header-pages__link link" href="#our-products">Our products</a>
+      </li>
+      <li class="header-pages__item">
+        <a class="header-pages__link link" href="#contact">Contact</a>
+      </li>
+    </ul>
+    <div class="header__buttons">
+      <button type="button" class="menu__button" data-menu-open>
+        <svg width="32" height="32">
+          <use href="./images/sprite/icons.svg#icon-burger"></use>
+        </svg>
+      </button>
+      <button
+        class="button button--default modal-open-button"
+        type="button"
+        href="#modal-win-buy"
+      >
+        Buy now
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" data-menu>
+    <div class="mobile-menu__container">
+      <a href="#" class="logo logo__mobile-menu">
+        <picture>
+          <source
+            srcset="./images/logo/logo-l.png 1x, ./images/logo/logo-l@2x.png 2x"
+            media="(min-width: 1200px)"
+          />
+          <source
+            srcset="./images/logo/logo-m.png 1x, ./images/logo/logo-m@2x.png 2x"
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="./images/logo/logo-s.png 1x, ./images/logo/logo-s@2x.png 2x"
+            media="(min-width: 480px)"
+          />
+          <img
+            class="logo-img"
+            src="./images/logo/logo-s.png"
+            alt="Logo ice-cream"
+          />
+        </picture>
+      </a>
+      <button class="close-button" data-menu-close>
+        <svg class="mobile-menu__close-button" width="32" height="32">
+          <use href="./images/sprite/icons.svg#icon-close-button"></use>
+        </svg>
+      </button>
+      <div class="mobile-menu__wrapper">
+        <ul class="mobile-menu__list list">
+          <li class="mobile-menu__item">
+            <a
+              class="mobile-menu__link link mobile-menu__link--current link"
+              href="#home"
+              >Home</a
+            >
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link link" href="#how-it's-made?"
+              >How it’s made?</a
+            >
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link link" href="#our-products"
+              >Our products</a
+            >
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link link" href="#contact">Contact</a>
+          </li>
+        </ul>
+        <button
+          type="button"
+          class="button mobile-menu__buy-button modal-open-button"
+          href=""
+        >
+          Buy now
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
