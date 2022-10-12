@@ -27,6 +27,7 @@
     text-decoration-line: underline;
     background-color: transparent;
     border: 0px;
+    padding: 6px 9px;
     &:hover {
       color: var(--button-hover-focus-color);
     }
@@ -92,6 +93,7 @@
       border-radius: 10px;
     }
     &--made {
+      padding: 11px 21px;
       @include font(600, 14px, 17px);
     }
   }

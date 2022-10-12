@@ -242,42 +242,39 @@
     @include font(400, 14px, 17px);
   }
 }
-.button--anchor:active .hero__arrow-hover,
-.button--anchor:active .hero__arrow-focus {
-  display: none;
-}
-.button--anchor:hover .hero__arrow-focus,
-.button--anchor:hover .hero__arrow-default {
-  display: none;
-}
-.button--anchor:focus .hero__arrow-active,
-.button--anchor:focus .hero__arrow-default {
-  display: none;
-}
-.button--anchor:active .hero__arrow-default {
+.button--anchor-icon {
   width: 40px;
-  height: 10px;
-  display: block;
+  height: 17px;
+
+  &:hover,
+  &:focus {
+    width: 50px;
+  }
 }
-.button--anchor:hover .hero__arrow-hover {
-  width: 50px;
-  height: 10px;
-  display: block;
+.button--anchor {
+  & .hero__arrow-default {
+    display: block;
+  }
+  & .hero__arrow-hover,
+  & .hero__arrow-focus {
+    display: none;
+  }
 }
-.button--anchor:focus .hero__arrow-focus {
-  width: 50px;
-  height: 10px;
-  display: block;
+.button--anchor:hover {
+  & .hero__arrow-hover {
+    display: block;
+  }
+  & .hero__arrow-default,
+  & .hero__arrow-focus {
+    display: none;
+  }
 }
-.hero__arrow-default {
-  width: 40px;
-  height: 10px;
-}
-.hero__arrow-hover {
-  width: 50px;
-  height: 10px;
-}
-.hero__arrow-focus {
-  width: 50px;
-  height: 10px;
+.button--anchor:focus {
+  & .hero__arrow-focus {
+    display: block;
+  }
+  & .hero__arrow-default,
+  & .hero__arrow-hover {
+    display: none;
+  }
 }
