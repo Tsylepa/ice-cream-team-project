@@ -7,7 +7,7 @@
     border: 2px solid var(--accent-color);
     border-radius: 8px;
     background-color: transparent;
-    color: var(--black-color);
+    color: var(--primaty-color);
     &:hover,
     &:focus {
       border-color: var(--button-hover-focus-color);
@@ -44,7 +44,7 @@
     padding: 12px 34px;
     border-radius: 10px;
     border: 0px;
-    color: var(--black-color);
+    color: var(--primary-color);
     background: var(--accent-color);
     &:hover,
     &:focus {
@@ -68,7 +68,7 @@
     &:hover,
     :focus {
       border-color: var(--button-hover-focus-color);
-      color: var(--black-color);
+      color: var(--primary-color);
     }
     &:focus {
       color: var(--secondary-color);

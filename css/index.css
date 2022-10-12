@@ -15,7 +15,6 @@
   --rights-color: #7a7a7a;
   --border-color: #e1e1e1;
   --pale-color: #ababab;
-  --black-color: #000000;
 }
 
 .button--franchise, .button--default, .button--made, .button--products, .modal__text-nutrval-name, .modal__circle, .form-modal, .modal, .backdrop, .social__link, .footer__rights--text, .gallery__wrapper, button {
@@ -138,7 +137,12 @@ button {
   text-decoration: none;
 }
 .link:hover, .link:focus {
+  color: currentColor;
   text-decoration: none;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .container {
@@ -259,7 +263,8 @@ button {
 }
 
 .mobile-menu {
-  position: fixed;
+  position: absolute;
+  overflow-x: hidden;
   top: 0;
   left: 0;
   z-index: 100;
@@ -267,16 +272,21 @@ button {
   height: 100vh;
   background-color: var(--main-theme-color);
   font-family: var(--primary-font);
-  opacity: 0;
-  visibility: hidden;
   pointer-events: none;
-  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 700ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 700ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 700ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 700ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 700ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-menu__container {
+  max-width: 480px;
   position: relative;
   height: 100%;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0px 20px 60px 20px;
 }
 
@@ -284,6 +294,8 @@ button {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 .close-button {
@@ -367,6 +379,9 @@ button {
     width: 768px;
     padding-left: 32px;
     padding-right: 32px;
+  }
+  .mobile-menu__container {
+    max-width: 768px;
   }
   .mobile-menu__link {
     font-weight: 700;
@@ -531,12 +546,15 @@ button {
   line-height: 10px;
   background-color: transparent;
   color: var(--primary-color);
-  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.button__products:hover, .button__products:focus {
+.button__products:hover {
   border-color: var(--button-hover-focus-color);
-  color: var(--primary-color);
+}
+.button__products:focus {
+  border-color: var(--button-hover-focus-color);
+  color: var(--secondary-color);
   cursor: pointer;
 }
 
@@ -558,8 +576,12 @@ button {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.button__how-its-made:hover, .button__how-its-made:focus {
+.button__how-its-made:hover {
   color: var(--button-hover-focus-color);
+  cursor: pointer;
+}
+.button__how-its-made:focus {
+  color: var(--secondary-color);
   cursor: pointer;
 }
 
@@ -577,6 +599,7 @@ button {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero__arrow-button:hover, .hero__arrow-button:focus {
+  color: var(--primary-color);
   cursor: pointer;
 }
 
@@ -1157,7 +1180,6 @@ button {
 
 .about {
   background-color: var(--main-theme-color);
-  padding-bottom: 0;
 }
 .about__label {
   font-family: var(--primary-font);
@@ -1177,7 +1199,6 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-bottom: 45px;
 }
 .about-description__img {
   display: -webkit-box;
@@ -1227,6 +1248,9 @@ button {
 }
 
 @media screen and (max-width: 767px) {
+  .about {
+    padding-bottom: 45px;
+  }
   .about__label {
     font-weight: 700;
     font-size: 18px;
@@ -1252,11 +1276,11 @@ button {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-bottom: 62px;
   }
   .about-description__img {
     width: 280px;
     height: 280px;
-    margin-bottom: 62px;
   }
   .about-description__wrapper-info {
     text-align: center;
@@ -1267,6 +1291,9 @@ button {
   }
 }
 @media screen and (min-width: 768px) {
+  .about {
+    padding-bottom: 50px;
+  }
   .about__label {
     font-weight: 800;
     font-size: 22px;
@@ -1276,14 +1303,13 @@ button {
     font-size: 34px;
   }
   .about-description {
-    padding-bottom: 50px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
   .about-description__wrapper {
-    margin-right: 33px;
+    margin-right: 32px;
   }
   .about-description__img {
     -webkit-box-align: center;
@@ -1311,6 +1337,9 @@ button {
   }
 }
 @media screen and (min-width: 1200px) {
+  .about {
+    padding-bottom: 60px;
+  }
   .about__label {
     font-weight: 800;
     font-size: 30px;
@@ -1318,9 +1347,6 @@ button {
   .about__title {
     margin-bottom: 82px;
     font-size: 36px;
-  }
-  .about-description {
-    padding-bottom: 60px;
   }
   .about-description__wrapper {
     margin-right: 100px;
@@ -1353,8 +1379,8 @@ button {
 }
 .advantages__list {
   color: var(--secondary-color);
-  padding-left: 45px;
-  padding-right: 45px;
+  padding-left: 25px;
+  padding-right: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1426,8 +1452,8 @@ button {
     padding-top: 65px;
   }
   .advantages__list {
-    padding-left: 76px;
-    padding-right: 76px;
+    padding-left: 44px;
+    padding-right: 44px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1440,15 +1466,15 @@ button {
   }
   .advantages__title {
     font-weight: 700;
-    font-size: 46px;
+    font-size: 48px;
     line-height: 59px;
     margin-bottom: 16px;
     letter-spacing: 0.04em;
   }
   .advantages__text {
     font-weight: 400;
-    font-size: 16px;
-    line-height: 176%;
+    font-size: 14px;
+    line-height: 174%;
     letter-spacing: 0.02em;
   }
 }
@@ -1472,6 +1498,8 @@ button {
     padding-bottom: 204px;
   }
   .advantages__list {
+    padding-left: 16px;
+    padding-right: 16px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -2609,7 +2637,7 @@ button {
   border: 2px solid var(--accent-color);
   border-radius: 8px;
   background-color: transparent;
-  color: var(--black-color);
+  color: var(--primaty-color);
 }
 .button--products:hover, .button--products:focus {
   border-color: var(--button-hover-focus-color);
@@ -2648,7 +2676,7 @@ button {
   padding: 12px 34px;
   border-radius: 10px;
   border: 0px;
-  color: var(--black-color);
+  color: var(--primary-color);
   background: var(--accent-color);
 }
 .button--default:hover, .button--default:focus {
@@ -2673,7 +2701,7 @@ button {
 .button--franchise:hover,
 .button--franchise :focus {
   border-color: var(--button-hover-focus-color);
-  color: var(--black-color);
+  color: var(--primary-color);
 }
 .button--franchise:focus {
   color: var(--secondary-color);
