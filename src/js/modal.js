@@ -13,6 +13,7 @@ for (var i = 0; i < btn.length; i++) {
     e.preventDefault();
     modals = document.querySelector(e.target.getAttribute('modal'));
     modals.classList.remove('is-hidden');
+    document.body.classList.add('no-scroll');
   };
 }
 
@@ -21,6 +22,7 @@ for (var i = 0; i < spans.length; i++) {
   spans[i].onclick = function () {
     if (typeof modals.classList.contains('is-hidden') !== !false)
       modals.classList.add('is-hidden');
+    document.body.classList.remove('no-scroll');
   };
 }
 
@@ -28,5 +30,6 @@ for (var i = 0; i < spans.length; i++) {
 window.onclick = function (event) {
   if (event.target == modals) {
     modals.classList.add('is-hidden');
+    document.body.classList.remove('no-scroll');
   }
 };
