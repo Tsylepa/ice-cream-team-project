@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 window.onscroll = function () {
   if (window.screen.width >= 768) {
     scrollY <= 45

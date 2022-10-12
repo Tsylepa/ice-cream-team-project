@@ -11,17 +11,24 @@ var close = document.getElementsByClassName('modal__close');
 for (var i = 0; i < btn.length; i++) {
   btn[i].onclick = function (e) {
     e.preventDefault();
-    modal = document.querySelector(e.target.getAttribute('href'));
+    modal = document.querySelector(e.target.getAttribute('modal'));
     modal.classList.remove('is-hidden');
   };
 }
 
 // When the user clicks on <span> (x), close the modal
 for (var i = 0; i < close.length; i++) {
-  close[i].onclick = function (e) {
+  close[i].onclick = function () {
     for (var index in modals) {
       if (typeof modals[index].style !== 'undefined')
         modals[index].classList.add('is-hidden');
     }
   };
 }
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.classList.add('is-hidden');
+  }
+};
