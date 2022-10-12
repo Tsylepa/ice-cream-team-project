@@ -5,7 +5,7 @@ var btn = document.querySelectorAll('button.modal-open-button');
 var modals = document.querySelectorAll('.backdrop');
 
 // Get the <span> element that closes the modal
-var close = document.getElementsByClassName('modal__close');
+var spans = document.getElementsByClassName('modal__close');
 
 // When the user clicks the button, open the modal
 for (var i = 0; i < btn.length; i++) {
@@ -17,8 +17,8 @@ for (var i = 0; i < btn.length; i++) {
 }
 
 // When the user clicks on <span> (x), close the modal
-for (var i = 0; i < close.length; i++) {
-  close[i].onclick = function () {
+for (var i = 0; i < spans.length; i++) {
+  spans[i].onclick = function () {
     for (var index in modals) {
       if (typeof modals[index].style !== 'undefined')
         modals[index].classList.add('is-hidden');
@@ -28,7 +28,10 @@ for (var i = 0; i < close.length; i++) {
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.classList.add('is-hidden');
+  if (event.target.classList.contains('modal')) {
+    for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined')
+        modals[index].classList.add('is-hidden');
+    }
   }
 };
