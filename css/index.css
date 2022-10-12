@@ -2177,6 +2177,7 @@ button {
   padding: 0 15px;
   scale: 1;
   opacity: 1;
+  overflow-y: scroll;
   visibility: visible;
   background-color: rgba(0, 0, 0, 0.1);
 }
