@@ -1,6 +1,7 @@
 // Get the button that opens the modal
 var btn = document.querySelectorAll('button.modal-open-button');
 
+var iframe = document.getElementById('youtube');
 // All page modals
 var modals = document.querySelectorAll('.backdrop');
 
@@ -11,6 +12,7 @@ var spans = document.getElementsByClassName('modal__close');
 for (var i = 0; i < btn.length; i++) {
   btn[i].onclick = function (e) {
     e.preventDefault();
+    iframe.setAttribute('src', 'https://www.youtube.com/embed/xrbKIyBFAFM');
     modals = document.querySelector(e.target.getAttribute('modal'));
     modals.classList.remove('is-hidden');
     document.body.classList.add('no-scroll');
@@ -23,6 +25,7 @@ for (var i = 0; i < spans.length; i++) {
     if (typeof modals.classList.contains('is-hidden') !== !false)
       modals.classList.add('is-hidden');
     document.body.classList.remove('no-scroll');
+    iframe.removeAttribute('src', 'https://www.youtube.com/embed/xrbKIyBFAFM');
   };
 }
 
@@ -31,5 +34,6 @@ window.onclick = function (event) {
   if (event.target == modals) {
     modals.classList.add('is-hidden');
     document.body.classList.remove('no-scroll');
+    iframe.removeAttribute('src', 'https://www.youtube.com/embed/xrbKIyBFAFM');
   }
 };
