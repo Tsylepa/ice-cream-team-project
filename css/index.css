@@ -751,30 +751,33 @@ button, a {
 .button--anchor-icon {
   width: 40px;
   height: 17px;
+  pointer-events: none;
+  -webkit-transition: color var(--transition-function), width var(--transition-function), height var(--transition-function);
+  transition: color var(--transition-function), width var(--transition-function), height var(--transition-function);
 }
 .button--anchor-icon:hover, .button--anchor-icon:focus {
   width: 50px;
 }
 
 .button--anchor .hero__arrow-default {
-  display: block;
+  opacity: 1;
 }
 .button--anchor .hero__arrow-hover, .button--anchor .hero__arrow-focus {
-  display: none;
+  opacity: 0;
 }
 
 .button--anchor:hover .hero__arrow-hover {
-  display: block;
+  opacity: 1;
 }
 .button--anchor:hover .hero__arrow-default, .button--anchor:hover .hero__arrow-focus {
-  display: none;
+  opacity: 0;
 }
 
 .button--anchor:focus .hero__arrow-focus {
-  display: block;
+  opacity: 1;
 }
 .button--anchor:focus .hero__arrow-default, .button--anchor:focus .hero__arrow-hover {
-  display: none;
+  opacity: 0;
 }
 
 .product__content {
@@ -1113,7 +1116,7 @@ button, a {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--primary-color);
-  padding-bottom: 40px;
+  margin-bottom: 40px;
   text-align: center;
 }
 @media screen and (min-width: 480px) {
@@ -1123,14 +1126,14 @@ button, a {
 }
 @media screen and (min-width: 768px) {
   .production__name {
-    padding-bottom: 40px;
+    margin-bottom: 40px;
     font-size: 22px;
   }
 }
 @media screen and (min-width: 1200px) {
   .production__name {
     font-size: 30px;
-    padding-bottom: 65px;
+    margin-bottom: 65px;
   }
 }
 
@@ -1144,73 +1147,73 @@ button, a {
 }
 @media screen and (min-width: 480px) {
   .production__description {
-    padding-bottom: 55px;
+    margin-bottom: 55px;
   }
 }
 @media screen and (min-width: 768px) {
   .production__description {
-    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
   .production__description {
     font-size: 16px;
-    padding-bottom: 65px;
+    margin-bottom: 65px;
   }
 }
 
-@media screen and (min-width: 480px) {
-  .first-desc {
-    padding-bottom: 105px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .first-desc {
-    padding-bottom: 75px;
-  }
+.products__button {
+  padding: 10px 0;
+  border: none;
+  font-family: var(--primary-font);
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 10px;
+  fill: currentColor;
+  background-color: transparent;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 @media screen and (min-width: 1200px) {
-  .first-desc {
-    padding-bottom: 95px;
+  .products__button {
+    bottom: 60px;
   }
 }
-
-@media screen and (min-width: 768px) {
-  .third-desc {
-    padding-bottom: 60px;
-  }
+.products__button:hover .button__icon, .products__button:focus .button__icon {
+  width: 50px;
+}
+.products__button .products__arrow-default {
+  opacity: 1;
+}
+.products__button .products__arrow-hover, .products__button .products__arrow-focus {
+  opacity: 0;
 }
 
-.production__button {
-  margin-left: auto;
-  margin-right: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  line-height: 0;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  height: 40px;
-  align-items: center;
+.products__button:hover .products__arrow-hover {
+  opacity: 1;
+}
+.products__button:hover .products__arrow-default, .products__button:hover .products__arrow-focus {
+  opacity: 0;
 }
 
-.grid > .production__button {
-  display: block;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.products__button:focus .products__arrow-focus {
+  opacity: 1;
+}
+.products__button:focus .products__arrow-default, .products__button:focus .products__arrow-hover {
+  opacity: 0;
+}
+
+.button__icon {
+  width: 40px;
+  height: 17px;
+  pointer-events: none;
+  -webkit-transition: color var(--transition-function), width var(--transition-function), height var(--transition-function);
+  transition: color var(--transition-function), width var(--transition-function), height var(--transition-function);
 }
 
 .about {

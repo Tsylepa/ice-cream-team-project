@@ -245,7 +245,9 @@
 .button--anchor-icon {
   width: 40px;
   height: 17px;
-
+  pointer-events: none;
+  transition: color var(--transition-function), width var(--transition-function),
+    height var(--transition-function);
   &:hover,
   &:focus {
     width: 50px;
@@ -253,28 +255,28 @@
 }
 .button--anchor {
   & .hero__arrow-default {
-    display: block;
+    opacity: 1;
   }
   & .hero__arrow-hover,
   & .hero__arrow-focus {
-    display: none;
+    opacity: 0;
   }
 }
 .button--anchor:hover {
   & .hero__arrow-hover {
-    display: block;
+    opacity: 1;
   }
   & .hero__arrow-default,
   & .hero__arrow-focus {
-    display: none;
+    opacity: 0;
   }
 }
 .button--anchor:focus {
   & .hero__arrow-focus {
-    display: block;
+    opacity: 1;
   }
   & .hero__arrow-default,
   & .hero__arrow-hover {
-    display: none;
+    opacity: 0;
   }
 }
