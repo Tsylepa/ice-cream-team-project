@@ -88,10 +88,12 @@
   color: var(--primary-color);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover,
+  &:hover {
+    border-color: var(--button-hover-focus-color);
+  }
   &:focus {
     border-color: var(--button-hover-focus-color);
-    color: var(--primary-color);
+    color: var(--secondary-color);
     cursor: pointer;
   }
 }
@@ -106,9 +108,12 @@
   background-color: transparent;
   text-decoration-line: underline;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover,
-  &:focus {
+  &:hover {
     color: var(--button-hover-focus-color);
+    cursor: pointer;
+  }
+  &:focus {
+    color: var(--secondary-color);
     cursor: pointer;
   }
 }
