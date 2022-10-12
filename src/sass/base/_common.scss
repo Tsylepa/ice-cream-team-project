@@ -60,6 +60,12 @@ button {
   color: var(--primary-color);
   cursor: pointer;
 }
+button,a {
+  transition: color var(--transition-function), 
+              border-color var(--transition-function), 
+              background-color var(--transition-function), 
+              fill var(--transition-function);
+}
 
 .list {
   list-style: none;
