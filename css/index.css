@@ -18,7 +18,7 @@
   --black-color: #000000;
 }
 
-.modal__text-nutrval-name, .modal__circle, .form-modal, .modal, .backdrop, .social__link, .footer__rights--text, .gallery__wrapper, button {
+.button--franchise, .button--default, .button--made, .button--products, .modal__text-nutrval-name, .modal__circle, .form-modal, .modal, .backdrop, .social__link, .footer__rights--text, .gallery__wrapper, button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,7 +49,7 @@
   clip: rect(0 0 0 0);
 }
 
-.modal__text-nutrval-name, .modal__circle, .form-modal, .modal, .backdrop, .social__link, .footer__rights--text, .gallery__wrapper, button {
+.button--franchise, .button--default, .button--made, .button--products, .modal__text-nutrval-name, .modal__circle, .form-modal, .modal, .backdrop, .social__link, .footer__rights--text, .gallery__wrapper, button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1643,6 +1643,19 @@ button {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .reviews-list__item {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .reviews-list__item {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
 .reviews-list__pic {
   margin-bottom: 32px;
   margin-left: auto;
@@ -1658,14 +1671,8 @@ button {
   border-radius: 10px;
   padding: 34px 39px;
 }
-@media screen and (max-width: 767px) {
-  .reviews-list__box {
-    max-width: 280px;
-  }
-}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .reviews-list__box {
-    width: 705px;
     border-radius: 10px;
     padding: 29px 80px;
   }
@@ -2595,6 +2602,7 @@ button {
 }
 
 .button--products {
+  cursor: pointer;
   font-weight: 600;
   font-size: 8px;
   line-height: 10px;
@@ -2604,8 +2612,7 @@ button {
   background-color: transparent;
   color: var(--black-color);
 }
-.button--products:hover,
-.button--products :focus {
+.button--products:hover, .button--products:focus {
   border-color: var(--button-hover-focus-color);
 }
 .button--products:focus {
@@ -2618,6 +2625,7 @@ button {
   font-weight: 600;
   font-size: 8px;
   line-height: 10px;
+  cursor: pointer;
   color: var(--accent-color);
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -2637,14 +2645,14 @@ button {
   font-weight: 600;
   font-size: 14px;
   line-height: 18px;
+  cursor: pointer;
   padding: 12px 34px;
   border-radius: 10px;
   border: 0px;
   color: var(--black-color);
   background: var(--accent-color);
 }
-.button--default:hover,
-.button--default :focus {
+.button--default:hover, .button--default:focus {
   background: var(--button-hover-focus-color);
 }
 .button--default:focus {
@@ -2657,6 +2665,7 @@ button {
   font-weight: 600;
   font-size: 14px;
   line-height: 18px;
+  cursor: pointer;
   padding: 10px 44px;
   border: 2px solid var(--accent-color);
   border-radius: 10px;
@@ -2674,6 +2683,7 @@ button {
   border-color: var(--pale-color);
 }
 .button__icon-arrow {
+  cursor: pointer;
   fill: currentColor;
   margin-left: 5px;
 }

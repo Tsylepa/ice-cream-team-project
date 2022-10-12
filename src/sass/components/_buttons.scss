@@ -9,7 +9,7 @@
     background-color: transparent;
     color: var(--black-color);
     &:hover,
-    :focus {
+    &:focus {
       border-color: var(--button-hover-focus-color);
     }
     &:focus {
@@ -47,7 +47,7 @@
     color: var(--black-color);
     background: var(--accent-color);
     &:hover,
-    :focus {
+    &:focus {
       background: var(--button-hover-focus-color);
     }
     &:focus {
