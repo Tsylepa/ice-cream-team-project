@@ -6,34 +6,31 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-repeat: repeat-y;
+  background-image: url('/src/images/background/bg-s.jpg');
 
-@media screen and ($mobile-max) {
-      background-image:  url('/src/images/background/bg-s.jpg');
-    }
-
-@media screen and (min-device-pixel-ratio: 2) and ($mobile-max),
-  screen and (min-resolution: 192dpi) and ($mobile-max),
-  screen and (min-resolution: 2dppx) and ($mobile-max) {
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
       background-image: url('/src/images/background/bg-s@2x.jpg');
     }
 
-@media screen and ($tablet-min) and ($tablet-max) {
-  background-image: url('/src/images/background/bg-m.jpg');
-}
+@media screen and ($mobile-min) {
+      background-image:  url('/src/images/background/bg-m.jpg');
+    }
 
-@media screen and (min-device-pixel-ratio: 2) and ($tablet-min) and ($tablet-max),
-screen and (min-resolution: 192dpi) and ($tablet-min) and ($tablet-max),
-screen and (min-resolution: 2dppx) and ($tablet-min) and ($tablet-max) {
-  background-image: url('/src/images/background/bg-m@2x.jpg');
-}
+@media screen and (min-device-pixel-ratio: 2) and ($mobile-min),
+  screen and (min-resolution: 192dpi) and ($mobile-min),
+  screen and (min-resolution: 2dppx) and ($mobile-min) {
+      background-image: url('/src/images/background/bg-m@2x.jpg');
+    }
 
-@media screen and ($desktop-min) {
+@media screen and ($tablet-min) {
   background-image: url('/src/images/background/bg-l.jpg');
 }
 
-@media screen and (min-device-pixel-ratio: 2) and ($desktop-min),
-screen and (min-resolution: 192dpi) and ($desktop-min),
-screen and (min-resolution: 2dppx) and ($desktop-min) {
+@media screen and (min-device-pixel-ratio: 2) and ($tablet-min),
+screen and (min-resolution: 192dpi) and ($tablet-min),
+screen and (min-resolution: 2dppx) and ($tablet-min) {
   background-image: url('/src/images/background/bg-l@2x.jpg');
 }
 
