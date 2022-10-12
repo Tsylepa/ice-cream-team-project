@@ -11,18 +11,16 @@ var spans = document.getElementsByClassName('modal__close');
 for (var i = 0; i < btn.length; i++) {
   btn[i].onclick = function (e) {
     e.preventDefault();
-    modal = document.querySelector(e.target.getAttribute('modal'));
-    modal.classList.remove('is-hidden');
+    modals = document.querySelector(e.target.getAttribute('modal'));
+    modals.classList.remove('is-hidden');
   };
 }
 
 // When the user clicks on <span> (x), close the modal
 for (var i = 0; i < spans.length; i++) {
   spans[i].onclick = function () {
-    for (var index in modals) {
-      if (typeof modals[index].style !== 'undefined')
-        modals[index].classList.add('is-hidden');
-    }
+    if (typeof modals.classList.contains('is-hidden') !== !false)
+      modals.classList.add('is-hidden');
   };
 }
 
