@@ -6,8 +6,8 @@
 
   &__list {
     color: var(--secondary-color);
-    padding-left: 45px;
-    padding-right: 45px;
+    padding-left: 25px;
+    padding-right: 25px;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -82,8 +82,8 @@
     padding-top: 65px;
 
     &__list {
-      padding-left: 76px;
-      padding-right: 76px;
+      padding-left: 44px;
+      padding-right: 44px;
       flex-direction: row;
       gap: 80px;
     }
@@ -93,13 +93,13 @@
     }
 
     &__title {
-      @include font(700, 46px, 59px);
+      @include font(700, 48px, 59px);
       margin-bottom: 16px;
       letter-spacing: 0.04em;
     }
 
     &__text {
-      @include font(400, 16px, 176%);
+      @include font(400, 14px, 174%);
       letter-spacing: 0.02em;
     }
   }
@@ -133,6 +133,8 @@
     padding-bottom: 204px;
 
     &__list {
+      padding-left: 16px;
+      padding-right: 16px;
       flex-direction: row;
       gap: 32px;
     }
