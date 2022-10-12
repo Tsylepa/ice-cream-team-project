@@ -76,26 +76,31 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-repeat: repeat-y;
-  background-image: url("../images/background/productbg-1920.jpg");
+  background-image: url("/src/images/background/bg-s.jpg");
 }
 @media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   body {
-    background-image: url("../images/background/productbg-1920@2x.jpg");
+    background-image: url("/src/images/background/bg-s@2x.jpg");
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 480px) {
   body {
-    max-width: 787px;
+    background-image: url("/src/images/background/bg-m.jpg");
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 480px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 480px), screen and (min-resolution: 192dpi) and (min-width: 480px), screen and (min-resolution: 2dppx) and (min-width: 480px) {
   body {
-    max-width: 1199;
+    background-image: url("/src/images/background/bg-m@2x.jpg");
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   body {
-    max-width: 1900;
+    background-image: url("/src/images/background/bg-l.jpg");
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  body {
+    background-image: url("/src/images/background/bg-l@2x.jpg");
   }
 }
 
@@ -121,6 +126,7 @@ address {
 }
 
 button {
+  color: var(--primary-color);
   cursor: pointer;
 }
 
@@ -129,6 +135,9 @@ button {
 }
 
 .link {
+  text-decoration: none;
+}
+.link:hover, .link:focus {
   text-decoration: none;
 }
 
@@ -1649,12 +1658,6 @@ button {
     padding-right: 20px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .reviews-list__item {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-}
 
 .reviews-list__pic {
   margin-bottom: 32px;
@@ -1671,8 +1674,14 @@ button {
   border-radius: 10px;
   padding: 34px 39px;
 }
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .reviews-list__box {
+    width: 440px;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .reviews-list__box {
+    width: 705px;
     border-radius: 10px;
     padding: 29px 80px;
   }
@@ -1879,10 +1888,18 @@ button {
           flex-direction: column;
 }
 .footer__rights {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   border-top: 1px solid var(--border-color);
   padding-right: 0px;
   padding-left: 0px;
+  padding-top: 16px;
+  padding-bottom: 62px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .footer__rights--text {
   font-weight: 700;
@@ -1890,25 +1907,20 @@ button {
   line-height: 152%;
   letter-spacing: 0.02em;
   width: 160px;
-  text-align: center;
+  color: var(--rights-color);
   margin-left: auto;
   margin-right: auto;
-  color: var(--rights-color);
-  padding-top: 16px;
-  padding-bottom: 62px;
 }
-.footer__list {
-  list-style-type: none;
-}
-.footer__item--title {
+.footer__title {
   font-weight: 700;
   font-size: 34px;
   line-height: 41px;
   color: var(--secondary-color);
   text-transform: uppercase;
   width: 234px;
+  margin-bottom: 42px;
 }
-.footer__item--subtitle {
+.footer__subtitle {
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
@@ -1916,12 +1928,7 @@ button {
   width: 232px;
   word-wrap: normal;
   text-transform: uppercase;
-}
-.footer__item:not(:last-child) {
   margin-bottom: 16px;
-}
-.footer__item:last-child {
-  margin-bottom: 42px;
 }
 
 .social__list {
@@ -1973,7 +1980,6 @@ button {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding-bottom: 40px;
 }
 .social__contact--link {
   color: var(--secondary-color);
@@ -1997,35 +2003,31 @@ button {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .footer__item--title {
+  .footer__title {
     font-weight: 700;
     font-size: 48px;
     line-height: 59px;
     width: 340px;
+    margin-bottom: 32px;
   }
-  .footer__item--subtitle {
+  .footer__subtitle {
     font-weight: 700;
     font-size: 26px;
     line-height: 32px;
     width: 352px;
-  }
-  .footer__item:not(:last-child) {
     margin-bottom: 10px;
-  }
-  .footer__item:last-child {
-    margin-bottom: 32px;
   }
   .footer__rights {
     width: 100%;
     border-top: 1px solid var(--border-color);
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
   .footer__rights--text {
     font-weight: 700;
     font-size: 14px;
     line-height: 152%;
     width: 320px;
-    padding-top: 14px;
-    padding-bottom: 14px;
   }
   .social {
     display: -webkit-box;
@@ -2080,7 +2082,6 @@ button {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    padding-bottom: 56px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -2095,27 +2096,28 @@ button {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
-  .footer__item--title {
+  .footer__title {
     font-weight: 700;
     font-size: 58px;
     line-height: 71px;
-    margin-bottom: 42px;
+    margin-bottom: 0px;
     width: 497px;
   }
-  .footer__item--subtitle {
+  .footer__subtitle {
     font-weight: 400;
     font-size: 30px;
     line-height: 37px;
     color: var(--secondary-color);
     width: 504px;
-  }
-  .footer__item:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 14px;
   }
   .footer__rights {
-    margin-left: auto;
-    margin-right: auto;
+    padding-top: 14px;
+    padding-bottom: 14px;
     width: 1168px;
   }
   .footer__rights--text {
@@ -2123,8 +2125,6 @@ button {
     font-size: 14px;
     line-height: 26px;
     width: 320px;
-    padding-top: 14px;
-    padding-bottom: 14px;
   }
   .social {
     padding-bottom: 60px;
@@ -2137,7 +2137,6 @@ button {
     font-weight: 700;
     font-size: 16px;
     line-height: 186%;
-    padding-bottom: 60px;
   }
 }
 .backdrop {

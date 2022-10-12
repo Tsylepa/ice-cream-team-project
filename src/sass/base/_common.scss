@@ -11,29 +11,28 @@ body {
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-      background-image: url('/src/images/background/bg-s@2x.jpg');
-    }
+    background-image: url('/src/images/background/bg-s@2x.jpg');
+  }
 
-@media screen and ($mobile-min) {
-      background-image:  url('/src/images/background/bg-m.jpg');
-    }
+  @media screen and ($mobile-min) {
+    background-image: url('/src/images/background/bg-m.jpg');
+  }
 
-@media screen and (min-device-pixel-ratio: 2) and ($mobile-min),
-  screen and (min-resolution: 192dpi) and ($mobile-min),
-  screen and (min-resolution: 2dppx) and ($mobile-min) {
-      background-image: url('/src/images/background/bg-m@2x.jpg');
-    }
+  @media screen and (min-device-pixel-ratio: 2) and ($mobile-min),
+    screen and (min-resolution: 192dpi) and ($mobile-min),
+    screen and (min-resolution: 2dppx) and ($mobile-min) {
+    background-image: url('/src/images/background/bg-m@2x.jpg');
+  }
 
-@media screen and ($tablet-min) {
-  background-image: url('/src/images/background/bg-l.jpg');
-}
+  @media screen and ($tablet-min) {
+    background-image: url('/src/images/background/bg-l.jpg');
+  }
 
-@media screen and (min-device-pixel-ratio: 2) and ($tablet-min),
-screen and (min-resolution: 192dpi) and ($tablet-min),
-screen and (min-resolution: 2dppx) and ($tablet-min) {
-  background-image: url('/src/images/background/bg-l@2x.jpg');
-}
-
+  @media screen and (min-device-pixel-ratio: 2) and ($tablet-min),
+    screen and (min-resolution: 192dpi) and ($tablet-min),
+    screen and (min-resolution: 2dppx) and ($tablet-min) {
+    background-image: url('/src/images/background/bg-l@2x.jpg');
+  }
 }
 
 ul,
@@ -58,6 +57,7 @@ address {
 
 button {
   @extend %flexCenter;
+  color: var(--primary-color);
   cursor: pointer;
 }
 
@@ -67,4 +67,8 @@ button {
 
 .link {
   text-decoration: none;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
 }
