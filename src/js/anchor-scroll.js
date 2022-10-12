@@ -1,7 +1,6 @@
 function scrollToAnchor(hash) {
   var target = $(hash),
-    headerHeight = $('.header__container').height(); // Get fixed header height
-  headerHeightContact = $('.header__container').height() + 100; // Get fixed header height
+    headerHeight = $('.header__container').height() - 1; // Get fixed header height
   target = target.length ? target : $('[name=' + hash.slice(1) + ']');
   if (target.length) {
     $('html,body').animate(
