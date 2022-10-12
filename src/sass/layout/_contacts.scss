@@ -87,8 +87,12 @@
 
     margin-top: 8px;
     margin-bottom: 24px;
+    cursor: default;
     
-   
+   &:hover,
+   &:focus{
+    text-decoration: underline;
+   }
 
 }
 
@@ -123,11 +127,20 @@
 .contacts__mail{
     display: block;
     color: var(--primary-color);
-}
 
+    &:hover,
+    &:focus{
+      color: var(--accent-color);
+    }
+}  
 .contacts__tel{
     display: block;
     color: var(--primary-color);
+
+    &:hover,
+    &:focus{
+      color: var(--accent-color);
+    }
 
 
 }
