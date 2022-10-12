@@ -15,7 +15,7 @@
   --rights-color: #7a7a7a;
   --border-color: #e1e1e1;
   --pale-color: #ababab;
-  --black-color: #000000;
+  --transition-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button--franchise, .button--default, .button--made, .button--products, .modal__text-nutrval-name, .modal__circle, .form-modal, .modal, .backdrop, .social__link, .footer__rights--text, .gallery__wrapper, button {
@@ -118,6 +118,10 @@ button {
   cursor: pointer;
 }
 
+button, a {
+  transition: color var(--transition-function), border-color var(--transition-function), background-color var(--transition-function), fill var(--transition-function);
+}
+
 .list {
   list-style: none;
 }
@@ -126,6 +130,7 @@ button {
   text-decoration: none;
 }
 .link:hover, .link:focus {
+  color: currentColor;
   text-decoration: none;
 }
 
@@ -248,7 +253,7 @@ button {
   font-family: var(--primary-font);
   pointer-events: none;
   transform: translateX(100%);
-  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 700ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-menu__container {
@@ -482,9 +487,12 @@ button {
   color: var(--primary-color);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.button__products:hover, .button__products:focus {
+.button__products:hover {
   border-color: var(--button-hover-focus-color);
-  color: var(--primary-color);
+}
+.button__products:focus {
+  border-color: var(--button-hover-focus-color);
+  color: var(--secondary-color);
   cursor: pointer;
 }
 
@@ -503,8 +511,12 @@ button {
           text-decoration-line: underline;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.button__how-its-made:hover, .button__how-its-made:focus {
+.button__how-its-made:hover {
   color: var(--button-hover-focus-color);
+  cursor: pointer;
+}
+.button__how-its-made:focus {
+  color: var(--secondary-color);
   cursor: pointer;
 }
 
@@ -1199,8 +1211,8 @@ button {
 }
 .advantages__list {
   color: var(--secondary-color);
-  padding-left: 45px;
-  padding-right: 45px;
+  padding-left: 25px;
+  padding-right: 25px;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -1264,8 +1276,8 @@ button {
     padding-top: 65px;
   }
   .advantages__list {
-    padding-left: 76px;
-    padding-right: 76px;
+    padding-left: 44px;
+    padding-right: 44px;
     flex-direction: row;
     gap: 80px;
   }
@@ -1274,15 +1286,15 @@ button {
   }
   .advantages__title {
     font-weight: 700;
-    font-size: 46px;
+    font-size: 48px;
     line-height: 59px;
     margin-bottom: 16px;
     letter-spacing: 0.04em;
   }
   .advantages__text {
     font-weight: 400;
-    font-size: 16px;
-    line-height: 176%;
+    font-size: 14px;
+    line-height: 174%;
     letter-spacing: 0.02em;
   }
 }
@@ -1306,6 +1318,8 @@ button {
     padding-bottom: 204px;
   }
   .advantages__list {
+    padding-left: 16px;
+    padding-right: 16px;
     flex-direction: row;
     gap: 32px;
   }
@@ -1633,6 +1647,10 @@ button {
   color: var(--palette-color-3);
   margin-top: 8px;
   margin-bottom: 24px;
+  cursor: default;
+}
+.contacts__address:hover, .contacts__address:focus {
+  text-decoration: underline;
 }
 
 .contacts__desc {
@@ -1662,10 +1680,16 @@ button {
   display: block;
   color: var(--primary-color);
 }
+.contacts__mail:hover, .contacts__mail:focus {
+  color: var(--accent-color);
+}
 
 .contacts__tel {
   display: block;
   color: var(--primary-color);
+}
+.contacts__tel:hover, .contacts__tel:focus {
+  color: var(--accent-color);
 }
 
 .contacts__buttons-list {
@@ -2300,7 +2324,7 @@ button {
   border: 2px solid var(--accent-color);
   border-radius: 8px;
   background-color: transparent;
-  color: var(--black-color);
+  color: var(--primaty-color);
 }
 .button--products:hover, .button--products:focus {
   border-color: var(--button-hover-focus-color);
@@ -2339,7 +2363,7 @@ button {
   padding: 12px 34px;
   border-radius: 10px;
   border: 0px;
-  color: var(--black-color);
+  color: var(--primary-color);
   background: var(--accent-color);
 }
 .button--default:hover, .button--default:focus {
@@ -2364,7 +2388,7 @@ button {
 .button--franchise:hover,
 .button--franchise :focus {
   border-color: var(--button-hover-focus-color);
-  color: var(--black-color);
+  color: var(--primary-color);
 }
 .button--franchise:focus {
   color: var(--secondary-color);
