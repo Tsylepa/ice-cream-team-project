@@ -6,49 +6,43 @@
     flex-direction: column;
   }
   &__rights {
+    justify-content: center;
     width: 100%;
     border-top: 1px solid var(--border-color);
     padding-right: 0px;
     padding-left: 0px;
+    padding-top: 16px;
+    padding-bottom: 62px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     &--text {
       @include font(700, 14px, 152%);
       @extend %flexCenter;
       letter-spacing: 0.02em;
       width: 160px;
-      text-align: center;
+      color: var(--rights-color);
       margin-left: auto;
       margin-right: auto;
-      color: var(--rights-color);
-      padding-top: 16px;
-      padding-bottom: 62px;
     }
   }
-  &__list {
-    list-style-type: none;
-  }
-  &__item {
-    &--title {
-      @include font(700, 34px, 41px);
-      color: var(--secondary-color);
-      text-transform: uppercase;
-      width: 234px;
-    }
-    &--subtitle {
-      @include font(700, 18px, 22px);
-      color: var(--secondary-color);
-      width: 232px;
-      word-wrap: normal;
-      text-transform: uppercase;
-    }
-  }
-  &__item:not(:last-child) {
-    margin-bottom: 16px;
-  }
-  &__item:last-child {
+
+  &__title {
+    @include font(700, 34px, 41px);
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    width: 234px;
     margin-bottom: 42px;
   }
+  &__subtitle {
+    @include font(700, 18px, 22px);
+    color: var(--secondary-color);
+    width: 232px;
+    word-wrap: normal;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
 }
-
 .social {
   &__list {
     @include grid(3, 28px);
@@ -81,7 +75,6 @@
     letter-spacing: 0.02em;
     display: flex;
     justify-content: flex-end;
-    padding-bottom: 40px;
     &--link {
       color: var(--secondary-color);
       text-decoration: none;
@@ -99,30 +92,25 @@
       flex-direction: row;
       justify-content: space-between;
     }
-    &__item {
-      &--title {
-        @include font(700, 48px, 59px);
-        width: 340px;
-      }
-      &--subtitle {
-        @include font(700, 26px, 32px);
-        width: 352px;
-      }
-    }
-    &__item:not(:last-child) {
-      margin-bottom: 10px;
-    }
-    &__item:last-child {
+
+    &__title {
+      @include font(700, 48px, 59px);
+      width: 340px;
       margin-bottom: 32px;
+    }
+    &__subtitle {
+      @include font(700, 26px, 32px);
+      width: 352px;
+      margin-bottom: 10px;
     }
     &__rights {
       width: 100%;
       border-top: 1px solid var(--border-color);
+      padding-top: 14px;
+      padding-bottom: 14px;
       &--text {
         @include font(700, 14px, 152%);
         width: 320px;
-        padding-top: 14px;
-        padding-bottom: 14px;
       }
     }
   }
@@ -152,7 +140,6 @@
       @include font(700, 14px, 186%);
       display: flex;
       justify-content: flex-end;
-      padding-bottom: 56px;
     }
   }
 }
@@ -163,34 +150,30 @@
     &__сontainer {
       flex-direction: row;
       justify-content: space-between;
+      align-items: baseline;
     }
-    &__item {
-      &--title {
-        @include font(700, 58px, 71px);
-        margin-bottom: 42px;
-        width: 497px;
-      }
-      &--subtitle {
-        @include font(400, 30px, 37px);
-        color: var(--secondary-color);
-        width: 504px;
-      }
+    &__title {
+      @include font(700, 58px, 71px);
+      margin-bottom: 0px;
+      width: 497px;
     }
-    &__item:not(:last-child) {
-      margin-bottom: 10px;
+    &__subtitle {
+      @include font(400, 30px, 37px);
+      color: var(--secondary-color);
+      width: 504px;
+      margin-bottom: 14px;
     }
     &__rights {
-      margin-left: auto;
-      margin-right: auto;
+      padding-top: 14px;
+      padding-bottom: 14px;
       width: 1168px;
       &--text {
         @include font(700, 14px, 26px);
         width: 320px;
-        padding-top: 14px;
-        padding-bottom: 14px;
       }
     }
   }
+
   .social {
     padding-bottom: 60px;
     &__list {
@@ -199,7 +182,6 @@
     }
     &__contact {
       @include font(700, 16px, 186%);
-      padding-bottom: 60px;
     }
   }
 }
