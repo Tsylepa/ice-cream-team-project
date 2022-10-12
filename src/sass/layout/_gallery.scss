@@ -17,8 +17,12 @@
     @extend %flexCenter;
     background-color: var(--secondary-color);
     height: 130px;
-    width: 279px;
+    // width: 279px;
+    width: 100%;
     border-radius: 7.4px;
+    @media screen and ($mobile-min) {
+            width: 440px;
+        }
     @media screen and ($tablet-min) {
         height: 327px;
         width: 716px;
@@ -37,7 +41,7 @@
     position: absolute;
     animation: round 12s infinite;
     opacity: 0;
-    max-width: 100%;
+    width: 100%;
     border-radius: 7.4px;
     @media screen and ($tablet-min) {
         height: 327px;
@@ -51,6 +55,7 @@
 }
 
 .gallery__img{
+    width: 100%;
     @media screen and ($tablet-min) {
         border-radius: 18px;
     }
