@@ -242,3 +242,39 @@
     @include font(400, 14px, 17px);
   }
 }
+.button--anchor-icon {
+  width: 40px;
+  height: 17px;
+
+  &:hover,
+  &:focus {
+    width: 50px;
+  }
+}
+.button--anchor {
+  & .hero__arrow-default {
+    display: block;
+  }
+  & .hero__arrow-hover,
+  & .hero__arrow-focus {
+    display: none;
+  }
+}
+.button--anchor:hover {
+  & .hero__arrow-hover {
+    display: block;
+  }
+  & .hero__arrow-default,
+  & .hero__arrow-focus {
+    display: none;
+  }
+}
+.button--anchor:focus {
+  & .hero__arrow-focus {
+    display: block;
+  }
+  & .hero__arrow-default,
+  & .hero__arrow-hover {
+    display: none;
+  }
+}
