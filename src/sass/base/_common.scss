@@ -4,7 +4,7 @@ body {
   color: var(--primary-color);
   font-family: var(--primary-font);
   background-attachment: fixed;
-  background-size: contain;
+  background-size: cover;
   background-repeat: repeat-y;
   background-image: url('/src/images/background/bg-s.jpg');
 
@@ -60,11 +60,11 @@ button {
   color: var(--primary-color);
   cursor: pointer;
 }
-button,a {
-  transition: color var(--transition-function), 
-              border-color var(--transition-function), 
-              background-color var(--transition-function), 
-              fill var(--transition-function);
+button,
+a {
+  transition: color var(--transition-function),
+    border-color var(--transition-function),
+    background-color var(--transition-function), fill var(--transition-function);
 }
 
 .list {
