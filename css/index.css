@@ -1051,6 +1051,7 @@ a {
 .production {
   border-radius: 24px;
   width: 100%;
+  min-height: 420px;
   max-width: 280px;
   padding-left: 20px;
   padding-right: 20px;
