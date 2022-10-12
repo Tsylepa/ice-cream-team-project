@@ -1,18 +1,19 @@
-@import './header';
 .hero__section {
   background-color: var(--main-theme-color);
 }
 .hero__container {
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 110px;
+
   background-position: center bottom;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-image: url('../images/hero+header/hero-bg-s.png');
-  
+
   @media screen and ($mobile-max) {
     max-width: $mobile;
-    background-size: contain;
+    min-height: 500px;
   }
 }
 
@@ -26,11 +27,10 @@
 @media screen and (min-width: 768px) {
   .hero__container {
     width: $tablet;
-    padding-top: 114px;
+    padding-top: 110px;
     padding-bottom: 32px;
     padding-left: 32px;
     padding-right: 32px;
-    
     padding-top: 74px;
     background-image: url('../images/hero+header/hero-bg-m.png');
   }
@@ -73,6 +73,7 @@
 }
 .hero__buttons {
   display: flex;
+  align-items: center;
   gap: 8px;
 }
 .button__products {
@@ -152,11 +153,6 @@
   }
 }
 @media screen and (max-width: 767px) {
-  .hero__container {
-    min-height: 402px;
-    padding-top: 60px;
-  }
-
   .hero__bottom-part {
     display: none;
   }
@@ -165,6 +161,10 @@
   }
 }
 @media screen and (min-width: 768px) {
+  .hero__container {
+    height: auto;
+  }
+
   .hero__wrapper {
     margin-bottom: 56px;
   }
@@ -187,10 +187,9 @@
   }
 }
 @media screen and (min-width: 1200px) {
-
   .hero__container {
     width: 1200px;
-    padding-top: 75px;
+    padding-top: 115px;
     padding-bottom: 111px;
     padding-left: 16px;
     padding-right: 16px;

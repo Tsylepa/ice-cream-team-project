@@ -1,38 +1,18 @@
-.product {
-    background-size: contain;
-    background-repeat: no-repeat;
+// .product {
+//     background-size: contain;
+//     background-repeat: no-repeat;
 
 
-    @media screen and (min-width:210px) and ($mobile-max) {
-        background-image: url(../images/products/cardbg1-s.jpg);
-    }
+//     @media screen and (min-width:210px) and ($mobile-max) {
+//         background-image: url(../images/products/cardbg1-s.jpg);
+//     }
 
-    @media screen and (min-device-pixel-ratio: 2) and (min-width:210px) and ($mobile-max),
-    screen and (min-resolution: 192dpi)and (min-width:210px) and($mobile-max),
-    screen and (min-resolution: 2dppx) and (min-width:210px) and($mobile-max) {
-        background-image: url(../images/products/cardbg1-s@2x.jpg);
-    }
-
-    @media screen and ($tablet-min) {
-        background-image: url(../images/products/productbg-m.jpg);
-    }
-
-    @media screen and (min-device-pixel-ratio: 2) and ($tablet-min),
-    screen and (min-resolution: 192dpi)and ($tablet-min),
-    screen and (min-resolution: 2dppx) and ($tablet-min) {
-        background-image: url(../images/products/productbg-m@2x.jpg);
-    }
-
-    @media screen and ($desktop-min) {
-        background-image: url(../images/products/productbg-l.jpg);
-    }
-
-    @media screen and (min-device-pixel-ratio: 2) and ($desktop-min),
-    screen and (min-resolution: 192dpi)and ($desktop-min),
-    screen and (min-resolution: 2dppx) and ($desktop-min) {
-        background-image: url(../images/products/productbg-l@2x.jpg);
-    }
-}
+//     @media screen and (min-device-pixel-ratio: 2) and (min-width:210px) and ($mobile-max),
+//     screen and (min-resolution: 192dpi)and (min-width:210px) and($mobile-max),
+//     screen and (min-resolution: 2dppx) and (min-width:210px) and($mobile-max) {
+//         background-image: url(../images/products/cardbg1-s@2x.jpg);
+//     }
+// }
 
 .product__content {
     display: block;
@@ -42,13 +22,9 @@
     @media screen and ($mobile-min) {
         display: block;
         align-items: center;
-        // padding-top: 60px;
-        // padding-bottom: 60px;
     }
 
-    @media screen and ($tablet-min) {
-        // padding-bottom: 12px;
-    }
+
 }
 
 .product__label {
@@ -81,16 +57,25 @@
         padding-bottom: 164px;
     }
 
+    @media screen and ($tablet-min) {
+        padding-bottom: 200px;
+    }
+
+    @media screen and ($desktop-min) {
+        font-size: 36px;
+        padding-bottom: 303px;
+    }
+
 }
 
 .grid {
-    display: flexbox;
-    margin-right: auto;
-    margin-left: auto;
-    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
     @media screen and ($mobile-min) {
         display: flex;
+        flex-direction: row;
         align-items: center;
         flex-wrap: wrap;
         justify-content: center;
@@ -109,14 +94,15 @@
 
 .grid__item::before {
     position: absolute;
-    width: 100%;
-    max-width: 150px;
-    height: 150px;
+    // width: 100%;
+    // max-width: 200px;
+    // height: 200px;
     background-size: contain;
     background-repeat: no-repeat;
     display: block;
     top: -35%;
-    left: 0;
+    left: 15%;
+    translate: (35%, -15%);
     border-radius: 50%;
 
 }
@@ -313,6 +299,8 @@ screen and (min-resolution: 2dppx) and ($desktop-min) {
     border-radius: 24px;
     width: 100%;
     max-width: 280px;
+    padding-left: 20px;
+    padding-right: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -394,7 +382,7 @@ screen and (min-resolution: 2dppx) and ($desktop-min) {
     color: var(--primary-color);
 
     @media screen and ($mobile-min) {
-        padding-bottom: 65px;
+        padding-bottom: 55px;
     }
 
 
@@ -404,13 +392,13 @@ screen and (min-resolution: 2dppx) and ($desktop-min) {
 
     @media screen and ($desktop-min) {
         font-size: 16px;
-        padding-bottom: 70px;
+        padding-bottom: 65px;
     }
 }
 
 .first-desc {
     @media screen and ($mobile-min) {
-        padding-bottom: 115px;
+        padding-bottom: 105px;
     }
 
     @media screen and ($tablet-min) {

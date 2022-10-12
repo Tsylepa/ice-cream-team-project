@@ -11,7 +11,7 @@ var close = document.getElementsByClassName('modal__close');
 for (var i = 0; i < btn.length; i++) {
   btn[i].onclick = function (e) {
     e.preventDefault();
-    modal = document.querySelector(e.target.getAttribute('href'));
+    modal = document.querySelector(e.target.getAttribute('modal'));
     modal.classList.remove('is-hidden');
   };
 }
@@ -25,3 +25,10 @@ for (var i = 0; i < close.length; i++) {
     }
   };
 }
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.classList.add('is-hidden');
+  }
+};
