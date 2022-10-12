@@ -1,5 +1,4 @@
 .button {
-  @extend %flexCenter;
   &--products {
     @include font(600, 8px, 10px);
     padding: 5px 10px;
