@@ -26,10 +26,7 @@ for (var i = 0; i < spans.length; i++) {
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-  if (event.target.classList.contains('modal')) {
-    for (var index in modals) {
-      if (typeof modals[index].style !== 'undefined')
-        modals[index].classList.add('is-hidden');
-    }
+  if (event.target == modals) {
+    modals.classList.add('is-hidden');
   }
 };

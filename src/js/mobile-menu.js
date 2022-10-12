@@ -31,6 +31,8 @@
 // })();
 
 (() => {
+  var nav = document.querySelectorAll('.mobile-menu__link');
+
   const refs = {
     openMenuBtn: document.querySelector('[data-menu-open]'),
     closeMenuBtn: document.querySelector('[data-menu-close]'),
@@ -42,5 +44,12 @@
 
   function toggleModal() {
     refs.menu.classList.toggle('is-open');
+  }
+
+  for (var i = 0; i < nav.length; i++) {
+    nav[i].onclick = function (e) {
+      e.preventDefault();
+      refs.menu.classList.remove('is-open');
+    };
   }
 })();
