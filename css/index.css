@@ -15,6 +15,7 @@
   --rights-color: #7a7a7a;
   --border-color: #e1e1e1;
   --pale-color: #ababab;
+  --transition-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button--franchise, .button--default, .button--made, .button--products, .modal__text-nutrval-name, .modal__circle, .form-modal, .modal, .backdrop, .social__link, .footer__rights--text, .gallery__wrapper, button {
@@ -127,6 +128,11 @@ address {
 button {
   color: var(--primary-color);
   cursor: pointer;
+}
+
+button, a {
+  -webkit-transition: color var(--transition-function), border-color var(--transition-function), background-color var(--transition-function), fill var(--transition-function);
+  transition: color var(--transition-function), border-color var(--transition-function), background-color var(--transition-function), fill var(--transition-function);
 }
 
 .list {
@@ -742,6 +748,35 @@ button {
     line-height: 17px;
   }
 }
+.button--anchor-icon {
+  width: 40px;
+  height: 17px;
+}
+.button--anchor-icon:hover, .button--anchor-icon:focus {
+  width: 50px;
+}
+
+.button--anchor .hero__arrow-default {
+  display: block;
+}
+.button--anchor .hero__arrow-hover, .button--anchor .hero__arrow-focus {
+  display: none;
+}
+
+.button--anchor:hover .hero__arrow-hover {
+  display: block;
+}
+.button--anchor:hover .hero__arrow-default, .button--anchor:hover .hero__arrow-focus {
+  display: none;
+}
+
+.button--anchor:focus .hero__arrow-focus {
+  display: block;
+}
+.button--anchor:focus .hero__arrow-default, .button--anchor:focus .hero__arrow-hover {
+  display: none;
+}
+
 .product__content {
   display: block;
   -webkit-box-pack: center;
@@ -1562,10 +1597,15 @@ button {
 .gallery__wrapper {
   background-color: var(--secondary-color);
   height: 130px;
-  width: 279px;
+  width: 100%;
   border-radius: 7.4px;
   overflow: hidden;
   position: relative;
+}
+@media screen and (min-width: 480px) {
+  .gallery__wrapper {
+    width: 440px;
+  }
 }
 @media screen and (min-width: 768px) {
   .gallery__wrapper {
@@ -1587,7 +1627,7 @@ button {
   -webkit-animation: round 12s infinite;
           animation: round 12s infinite;
   opacity: 0;
-  max-width: 100%;
+  width: 100%;
   border-radius: 7.4px;
   overflow: hidden;
 }
@@ -1604,6 +1644,9 @@ button {
   }
 }
 
+.gallery__img {
+  width: 100%;
+}
 @media screen and (min-width: 768px) {
   .gallery__img {
     border-radius: 18px;
@@ -1850,6 +1893,10 @@ button {
   color: var(--palette-color-3);
   margin-top: 8px;
   margin-bottom: 24px;
+  cursor: default;
+}
+.contacts__address:hover, .contacts__address:focus {
+  text-decoration: underline;
 }
 
 .contacts__desc {
@@ -1879,10 +1926,16 @@ button {
   display: block;
   color: var(--primary-color);
 }
+.contacts__mail:hover, .contacts__mail:focus {
+  color: var(--accent-color);
+}
 
 .contacts__tel {
   display: block;
   color: var(--primary-color);
+}
+.contacts__tel:hover, .contacts__tel:focus {
+  color: var(--accent-color);
 }
 
 .contacts__buttons-list {
@@ -2237,7 +2290,7 @@ button {
 
 @media screen and (min-width: 768px) {
   .modal {
-    width: 564px;
+    max-width: 568;
     padding: 32px 60px;
   }
   .modal__heading {
@@ -2659,6 +2712,7 @@ button {
           text-decoration-line: underline;
   background-color: transparent;
   border: 0px;
+  padding: 6px 9px;
 }
 .button--made:hover {
   color: var(--button-hover-focus-color);
@@ -2725,6 +2779,7 @@ button {
     border-radius: 10px;
   }
   .button--made {
+    padding: 11px 21px;
     font-weight: 600;
     font-size: 14px;
     line-height: 17px;

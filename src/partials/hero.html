@@ -7,16 +7,12 @@
           made with <br />
           <span class="hero__title--important">passion</span>
         </h1>
-        <ul class="hero__buttons list">
-          <li>
-            <a class="button--products link" href="#products">Products</a>
-          </li>
-          <li>
-            <a class="button--made link modal-open-button" href="#about">
-              How it’s made?
-            </a>
-          </li>
-        </ul>
+        <div class="hero__buttons list">
+          <a class="button--products link" href="#products">Products</a>
+          <a class="button--made link modal-open-button" href="#about">
+            How it’s made?
+          </a>
+        </div>
       </div>
       <div class="hero__right-thumb">
         <ul class="cafes__list list">
@@ -36,25 +32,15 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et
       </p>
-      <button
-        class="hero__arrow-button button--anchor modal-open-button"
-        modal="#modal-win-ing"
-        type="button"
-        aria-label="go to modal"
-      >
-        <svg class="button--anchor-icon">
-          <use
-            class="hero__arrow-default"
-            href="./images/sprite/icons.svg#icon-arrow-default"
-          ></use>
-          <use
-            class="hero__arrow-hover"
-            href="./images/sprite/icons.svg#icon-arrow-hover"
-          ></use>
-          <use
-            class="hero__arrow-focus"
-            href="./images/sprite/icons.svg#icon-arrow-focus"
-          ></use>
+      <button class="hero__arrow-button" type="button">
+        <svg class="hero__arrow-default" width="40" height="0">
+          <use href="./images/sprite/icons.svg#icon-arrow-default"></use>
+        </svg>
+        <svg class="hero__arrow-focus" width="50" height="0">
+          <use href="./images/sprite/icons.svg#icon-arrow-default"></use>
+        </svg>
+        <svg class="hero__arrow-hover" width="50" height="0">
+          <use href="./images/sprite/icons.svg#icon-arrow-default"></use>
         </svg>
       </button>
     </div>

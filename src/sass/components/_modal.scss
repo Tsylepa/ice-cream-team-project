@@ -46,7 +46,7 @@
 
 @media screen and ($tablet-min) {
   .modal {
-    width: 564px;
+    max-width: 568;
     padding: 32px 60px;
 
     &__heading {
