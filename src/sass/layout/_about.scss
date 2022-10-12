@@ -1,6 +1,5 @@
 .about {
     background-color: var(--main-theme-color);
-    padding-bottom: 0;
 
     &__label {
         font-family: var(--primary-font);
@@ -21,7 +20,6 @@
 
 .about-description {
         display: flex;
-        padding-bottom: 45px;
 
     &__img {
         display: flex;
@@ -68,6 +66,7 @@
 
 @media screen and ($mobile-max) {
     .about {
+        padding-bottom: 45px;
 
         &__label {
             font-weight: 700;
@@ -87,12 +86,12 @@
             display: flex;
             align-items: flex-start;
             justify-content: center;
+            margin-bottom: 62px;
         }
 
         &__img {
             width: 280px;
             height: 280px;
-            margin-bottom: 62px;
         }
 
         &__wrapper-info {
@@ -110,6 +109,7 @@
  @media screen and ($tablet-min) {
 
     .about {  
+        padding-bottom: 50px;
 
         &__label {
             font-weight: 800;
@@ -123,11 +123,10 @@
     }
 
     .about-description {
-        padding-bottom: 50px;
         flex-direction: row;
 
         &__wrapper {
-            margin-right: 33px;
+            margin-right: 32px;
         }
 
         &__img {
@@ -161,6 +160,7 @@
 
 @media screen and ($desktop-min) {
     .about {
+        padding-bottom: 60px;
 
         &__label {
             font-weight: 800;
@@ -174,7 +174,7 @@
     }
 
     .about-description {
-        padding-bottom: 60px;
+
 
         &__wrapper {
             margin-right: 100px;
