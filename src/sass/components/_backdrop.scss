@@ -2,12 +2,10 @@
   position: fixed;
   z-index: 99999;
   @extend %flexCenter;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   top: 0;
   left: 0;
-  padding: 0 15px;
-  scale: 1;
   opacity: 1;
   overflow-y: scroll;
   visibility: visible;
@@ -17,6 +15,11 @@
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
-    scale: 1.2;
+  }
+
+  &--overflow {
+    @media screen and ($mobile-max) {
+      align-items: baseline;
+    }
   }
 }

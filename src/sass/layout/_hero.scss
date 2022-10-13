@@ -118,17 +118,17 @@
   }
 }
 .hero__arrow-button {
+  width: 40px;
   padding: 10px 0;
   border: none;
-  font-family: var(--primary-font);
   @include font(600, 8px, 10px);
-  color: var(--secondary-color);
-  fill: currentColor;
+  fill: var(--secondary-color);
   background-color: transparent;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-function), width var(--transition-function);
   &:hover,
   &:focus {
-    color: var(--primary-color);
+    width: 50px;
+    fill: var(--primary-color);
     cursor: pointer;
   }
 }
@@ -240,5 +240,39 @@
   }
   .cafes__name {
     @include font(400, 14px, 17px);
+  }
+}
+.button--anchor-icon {
+  width: 100%;
+  height: 17px;
+  pointer-events: none;
+  transition: color var(--transition-function), width var(--transition-function),
+    height var(--transition-function);
+}
+.button--anchor {
+  & .hero__arrow-default {
+    opacity: 1;
+  }
+  & .hero__arrow-hover,
+  & .hero__arrow-focus {
+    opacity: 0;
+  }
+}
+.button--anchor:hover {
+  & .hero__arrow-hover {
+    opacity: 1;
+  }
+  & .hero__arrow-default,
+  & .hero__arrow-focus {
+    opacity: 0;
+  }
+}
+.button--anchor:focus {
+  & .hero__arrow-focus {
+    opacity: 1;
+  }
+  & .hero__arrow-default,
+  & .hero__arrow-hover {
+    opacity: 0;
   }
 }
