@@ -2232,11 +2232,14 @@ a {
   overflow-y: scroll;
   visibility: visible;
   background-color: rgba(0, 0, 0, 0.1);
+  -webkit-transition: scale var(--transition-function), opacity var(--transition-function), visibility var(--transition-function);
+  transition: scale var(--transition-function), opacity var(--transition-function), visibility var(--transition-function);
 }
 .backdrop.is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+  scale: 1.2;
 }
 @media screen and (max-width: 767px) {
   .backdrop--overflow {
@@ -2265,6 +2268,11 @@ a {
   background-color: var(--secondary-color);
   border: 2px solid var(--accent-color);
   border-radius: 10px;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all var(--transition-function);
+  transition: all var(--transition-function);
 }
 .modal__heading {
   font-family: var(--secondary-font);

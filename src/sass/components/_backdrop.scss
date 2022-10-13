@@ -10,11 +10,14 @@
   overflow-y: scroll;
   visibility: visible;
   background-color: rgba(0, 0, 0, 0.1);
+  transition: scale var(--transition-function),
+    opacity var(--transition-function), visibility var(--transition-function);
 
   &.is-hidden {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
+    scale: 1.2;
   }
 
   &--overflow {
