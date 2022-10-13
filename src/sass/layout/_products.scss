@@ -33,6 +33,12 @@
   @media screen and ($mobile-min) {
     padding-bottom: 12px;
   }
+  @media screen and ($tablet-min) {
+    @include font(800, 22px, 27px);
+  }
+  @media screen and ($desktop-min) {
+    @include font(800, 30px, 37px);
+  }
 }
 
 .product__title {
