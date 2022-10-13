@@ -2569,13 +2569,18 @@ a {
 }
 
 .modal__text-nutrval-name {
+  display: block;
+  text-align: center;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 8px;
+  padding-top: 5px;
   font-weight: 400;
   font-size: 10px;
   line-height: 1.2;
   color: var(--primary-color);
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 @media screen and (min-width: 768px) {
   .modal__text-nutrval-name {

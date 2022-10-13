@@ -183,12 +183,17 @@
 }
 
 .modal__text-nutrval-name {
+  display: block;
+  text-align: center;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 8px;
+  padding-top: 5px;
   @extend %flexCenter;
   @include font(400, 10px, 1.2);
   color: var(--primary-color);
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   @media screen and ($tablet-min) {
     @include font(400, 12px, 2.3);
