@@ -6,8 +6,6 @@
   height: 100vh;
   top: 0;
   left: 0;
-  padding: 0 15px;
-  scale: 1;
   opacity: 1;
   overflow-y: scroll;
   visibility: visible;
@@ -17,7 +15,6 @@
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
-    scale: 1.2;
   }
 
   &--overflow {

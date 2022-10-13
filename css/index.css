@@ -2228,8 +2228,6 @@ a {
   height: 100vh;
   top: 0;
   left: 0;
-  padding: 0 15px;
-  scale: 1;
   opacity: 1;
   overflow-y: scroll;
   visibility: visible;
@@ -2239,7 +2237,6 @@ a {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  scale: 1.2;
 }
 @media screen and (max-width: 767px) {
   .backdrop--overflow {
@@ -2255,8 +2252,13 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   max-width: 480px;
   padding: 28px;
+  overflow-y: scroll;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.4;
@@ -2269,6 +2271,7 @@ a {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
+  text-align: center;
 }
 .modal__iframe {
   width: 100%;
@@ -2298,7 +2301,8 @@ a {
 
 @media screen and (min-width: 768px) {
   .modal {
-    max-width: 568;
+    max-width: 568px;
+    width: 568px;
     padding: 32px 60px;
   }
   .modal__heading {
@@ -2406,11 +2410,7 @@ a {
 
 @media screen and (min-width: 768px) {
   .form-modal__label {
-    width: 368px;
     margin-bottom: 16px;
-  }
-  .form-modal__field {
-    padding: 20px 16px;
   }
   .form-modal__field::-webkit-input-placeholder {
     font-weight: 400;
@@ -2438,21 +2438,10 @@ a {
     line-height: 1.4;
   }
   .form-modal__field_textarea {
-    width: 368px;
-    height: 84px;
+    min-height: 84px;
     margin-bottom: 32px;
   }
 }
-.modal__heading_center {
-  text-align: justify;
-  padding: 0 50px;
-}
-@media screen and (min-width: 768px) {
-  .modal__heading_center {
-    text-align: center;
-  }
-}
-
 .modal__description_mrgbtm {
   margin-bottom: 24px;
 }
@@ -2512,11 +2501,6 @@ a {
   background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #d9d9d9;
   -webkit-box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
           box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
-}
-
-.modal_img {
-  position: absolute;
-  top: -7px;
 }
 
 .modal__list-nutrval {

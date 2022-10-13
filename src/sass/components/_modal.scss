@@ -2,8 +2,14 @@
   position: relative;
   @extend %flexCenter;
   flex-direction: column;
+  width: 100%;
+  height: max-content;
   max-width: $mobile;
   padding: 28px;
+  // left: 50%;
+  // top: 50%;
+  overflow-y: scroll;
+  // transform: translate(-50%, -50%);
   @include font(400, 16px, 1.4);
   background-color: var(--secondary-color);
   border: 2px solid var(--accent-color);
@@ -12,6 +18,7 @@
   &__heading {
     font-family: var(--secondary-font);
     @include font(400, 16px, 1.5);
+    text-align: center;
   }
 
   &__iframe {
@@ -46,7 +53,8 @@
 
 @media screen and ($tablet-min) {
   .modal {
-    max-width: 568;
+    max-width: 568px;
+    width: 568px;
     padding: 32px 60px;
 
     &__heading {

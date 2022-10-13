@@ -57,12 +57,7 @@
 
 @media screen and ($tablet-min) {
   .form-modal__label {
-    width: 368px;
     margin-bottom: 16px;
-  }
-
-  .form-modal__field {
-    padding: 20px 16px;
   }
 
   .form-modal__field::placeholder {
@@ -70,19 +65,8 @@
   }
 
   .form-modal__field_textarea {
-    width: 368px;
-    height: 84px;
+    min-height: 84px;
     margin-bottom: 32px;
-  }
-}
-
-.modal__heading_center {
-  text-align: justify;
-  padding: 0 50px;
-
-  @media screen and ($tablet-min) {
-    text-align: center;
-    // padding: 0 50px;
   }
 }
 
@@ -138,8 +122,8 @@
 }
 
 .modal_img {
-  position: absolute;
-  top: -7px;
+  // position: absolute;
+  // top: -7px;
 }
 .modal__list-nutrval {
   display: flex;
