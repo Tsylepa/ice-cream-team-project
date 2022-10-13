@@ -1,5 +1,6 @@
 .backdrop {
   position: fixed;
+  display: block;
   z-index: 99999;
   @extend %flexCenter;
   width: 100vw;
@@ -18,11 +19,5 @@
     opacity: 0;
     pointer-events: none;
     scale: 1.2;
-  }
-
-  &--overflow {
-    @media screen and ($mobile-max) {
-      align-items: baseline;
-    }
   }
 }

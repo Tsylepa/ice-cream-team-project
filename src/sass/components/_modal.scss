@@ -18,6 +18,13 @@
   transform: translateY(0);
   transition: all var(--transition-function);
 
+  &--overflow {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // align-items: baseline;
+  }
+
   &__heading {
     font-family: var(--secondary-font);
     @include font(400, 16px, 1.5);
