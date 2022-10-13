@@ -1,6 +1,5 @@
 .backdrop {
   position: fixed;
-  display: block;
   z-index: 99999;
   @extend %flexCenter;
   width: 100vw;

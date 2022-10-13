@@ -1,28 +1,27 @@
 .modal {
-  position: relative;
+  // position: relative;
   @extend %flexCenter;
   flex-direction: column;
   width: 100%;
   height: max-content;
   max-width: $mobile;
   padding: 28px;
-  // left: 50%;
-  // top: 50%;
   overflow-y: scroll;
-  // transform: translate(-50%, -50%);
   @include font(400, 16px, 1.4);
   background-color: var(--secondary-color);
   border: 2px solid var(--accent-color);
   border-radius: 10px;
   opacity: 1;
-  transform: translateY(0);
   transition: all var(--transition-function);
-
-  &--overflow {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    // align-items: baseline;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  @media screen and ($tablet-max) {
+    &--overflow {
+      top: 0;
+      transform: translate(-50%, 0);
+    }
   }
 
   &__heading {
