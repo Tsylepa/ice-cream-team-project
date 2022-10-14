@@ -24,7 +24,7 @@
   width: 100%;
   padding: 7px 12px;
   background: rgba(248, 210, 78, 0.1);
-  border: 1px solid #84a178;
+  border: 1px solid var(--main-theme-color);
   border-radius: 10px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -157,8 +157,8 @@
   box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
 
   @media screen and ($tablet-min) {
-    width: 43px;
-    height: 43px;
+    width: 53px;
+    height: 53px;
   }
 }
 
@@ -204,29 +204,29 @@
   margin-top: 88px;
   width: 132px;
   height: 136px;
-  border: 2px solid #96af8c;
+  border: 2px solid var(--product-color-1);
   filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
   border-radius: 15.7808px;
 
   .form-modal__check:checked + & {
-    background-color: #96af8c;
+    background-color: var(--product-color-1);
   }
 }
 
 .modal__rect-product_ch-color-two {
-  border-color: #efd478;
+  border-color: var(--accent-color);
 
   .form-modal__check:checked + & {
-    background-color: #efd478;
+    background-color: var(--accent-color);
   }
 }
 
 .modal__rect-product_ch-color {
   margin-bottom: 24px;
-  border-color: var(--palette-color-1);
+  border-color: var(--palette-color-3);
 
   .form-modal__check:checked + & {
-    background-color: var(--palette-color-1);
+    background-color: var(--palette-color-3);
   }
 
   @media screen and ($tablet-min) {

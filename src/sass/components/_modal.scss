@@ -4,7 +4,9 @@
   flex-direction: column;
   width: 100%;
   height: max-content;
+
   max-width: $mobile;
+  max-height: 95%;
   padding: 28px;
   overflow-y: scroll;
   @include font(400, 16px, 1.4);
@@ -17,10 +19,19 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+
   @media screen and ($tablet-max) {
     &--overflow {
+      max-height: max-content;
       top: 0;
       transform: translate(-50%, 0);
+    }
+    @media screen and ($mobile-max) {
+      #moal-win-buy {
+        max-height: max-content;
+        top: 0;
+        transform: translate(-50%, 0);
+      }
     }
   }
 
